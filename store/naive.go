@@ -2,16 +2,30 @@ package store
 
 import "github.com/wangjohn/quickselect"
 
+var _ Store = &NaiveStore{}
+
 type NaiveStore struct {
-	Data map[int]float64
+	Data     map[int]float64
+	PeakKeys int
+}
+
+func NewNaiveStore() *NaiveStore {
+	return &NaiveStore{
+		Data: map[int]float64{},
+	}
+}
+
+func (c *NaiveStore) GetPeakKeys() int {
+	return c.PeakKeys
 }
 
 func (c *NaiveStore) Add(key int, value float64) {
 	c.Data[key] += value
+	c.PeakKeys = max(c.PeakKeys, len(c.Data))
 }
 
 func (c *NaiveStore) FinishAdd() {
-
+	// Nothing
 }
 
 func (c *NaiveStore) GetTopNItems(topN int) map[int]float64 {
@@ -32,14 +46,3 @@ func (c *NaiveStore) GetTopNItems(topN int) map[int]float64 {
 	}
 	return r
 }
-
-type KeyValue struct {
-	key   int
-	value float64
-}
-
-type SortByValue []KeyValue
-
-func (a SortByValue) Len() int           { return len(a) }
-func (a SortByValue) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
-func (a SortByValue) Less(i, j int) bool { return a[i].value > a[j].value }

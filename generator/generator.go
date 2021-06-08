@@ -13,7 +13,10 @@
 
 package generator
 
-import "math/rand"
+import (
+	"log"
+	"math/rand"
+)
 
 // Generator generates a sequence of values, following some distribution (Uniform, Zipfian, etc.).
 type Generator interface {
@@ -25,4 +28,31 @@ type Generator interface {
 	// Calling Last should not advance the distribution or have any side effect.
 	// If Next has not been called, Last should return something reasonable.
 	Last() int64
+}
+
+var AllDistributions = []string{
+	"constant",
+	"uniform",
+	"zipfian",
+	"hotspot",
+	"sequential",
+}
+
+func GetDistribution(n int, name string, r *rand.Rand) Generator {
+	var g Generator
+	switch name {
+	case "constant":
+		g = NewConstant(r.Int63n(int64(n)) + 1)
+	case "uniform":
+		g = NewUniform(1, int64(n))
+	case "zipfian":
+		g = NewZipfianWithRange(1, int64(n), ZipfianConstant)
+	case "hotspot":
+		g = NewHotspot(1, int64(n), 0.2, 0.8)
+	case "sequential":
+		g = NewSequential(1, int64(n))
+	default:
+		log.Fatalf("unknown distribution %s", name)
+	}
+	return g
 }

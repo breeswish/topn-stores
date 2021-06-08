@@ -2,14 +2,29 @@ package store
 
 import "github.com/wangjohn/quickselect"
 
+var _ Store = &StoreV2{}
+
 type StoreV2Value struct {
 	Value         float64
 	OccupyWindows int
 }
 
 type StoreV2 struct {
-	Data map[int]*StoreV2Value
-	TopN int
+	Data     map[int]*StoreV2Value
+	TopN     int
+	PeakKeys int
+}
+
+func NewStoreV2(topN int) *StoreV2 {
+	return &StoreV2{
+		Data:     map[int]*StoreV2Value{},
+		TopN:     topN,
+		PeakKeys: 0,
+	}
+}
+
+func (c *StoreV2) GetPeakKeys() int {
+	return c.PeakKeys
 }
 
 func (c *StoreV2) Add(key int, value float64) {
@@ -40,6 +55,10 @@ func (a SortByAverageValue) Less(i, j int) bool {
 }
 
 func (c *StoreV2) FinishAdd() {
+	defer func() {
+		c.PeakKeys = max(c.PeakKeys, len(c.Data))
+	}()
+
 	slices := make([]KeyValueAndTimes, 0)
 	for key, value := range c.Data {
 		slices = append(slices, KeyValueAndTimes{
@@ -75,4 +94,3 @@ func (c *StoreV2) GetTopNItems(topN int) map[int]float64 {
 	}
 	return r
 }
-
