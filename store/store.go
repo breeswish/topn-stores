@@ -4,6 +4,7 @@ type Store interface {
 	Add(key int, value float64)
 	FinishAdd()
 	GetTopNItems(topN int) map[int]float64
+	GetRoundTopNItems(topN int) map[int]float64
 	GetPeakKeys() int
 }
 

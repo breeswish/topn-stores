@@ -5,10 +5,11 @@ import "github.com/wangjohn/quickselect"
 var _ Store = &StoreV3{}
 
 type StoreV3 struct {
-	Data     map[int]float64
-	DataBuf  map[int]float64
-	TopN     int
-	PeakKeys int
+	Data        map[int]float64
+	DataBuf     map[int]float64
+	LastDataBuf map[int]float64
+	TopN        int
+	PeakKeys    int
 }
 
 func NewStoreV3(topN int) *StoreV3 {
@@ -47,7 +48,27 @@ func (c *StoreV3) FinishAdd() {
 	for _, item := range slices {
 		c.Data[item.key] += item.value
 	}
+	c.LastDataBuf = c.DataBuf
 	c.DataBuf = map[int]float64{}
+}
+
+func (c *StoreV3) GetRoundTopNItems(topN int) map[int]float64 {
+	slices := make([]KeyValue, 0)
+	for key, value := range c.LastDataBuf {
+		slices = append(slices, KeyValue{
+			key:   key,
+			value: value,
+		})
+	}
+	if len(slices) > topN {
+		_ = quickselect.QuickSelect(SortByValue(slices), topN)
+		slices = slices[:topN]
+	}
+	r := map[int]float64{}
+	for _, item := range slices {
+		r[item.key] = item.value
+	}
+	return r
 }
 
 func (c *StoreV3) GetTopNItems(topN int) map[int]float64 {

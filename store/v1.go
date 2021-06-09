@@ -49,6 +49,10 @@ func (c *StoreV1) FinishAdd() {
 	}
 }
 
+func (c *StoreV1) GetRoundTopNItems(topN int) map[int]float64 {
+	return c.GetTopNItems(topN)
+}
+
 func (c *StoreV1) GetTopNItems(topN int) map[int]float64 {
 	slices := make([]KeyValue, 0)
 	for key, value := range c.Data {

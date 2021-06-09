@@ -13,7 +13,7 @@ import (
 	"go.uber.org/zap"
 )
 
-const iterRounds = 60
+const rounds = 60
 const finalTopN = 20
 const storeIdBase = "base"
 
@@ -40,7 +40,7 @@ var newStoreFns = map[string]NewStoreFn{
 	},
 }
 
-func CalcKeyEfficiency(base map[int]float64, target map[int]float64) float64 {
+func CalcKeyAccuracy(base map[int]float64, target map[int]float64) float64 {
 	hit := 0
 	all := 0
 	for key := range base {
@@ -52,7 +52,7 @@ func CalcKeyEfficiency(base map[int]float64, target map[int]float64) float64 {
 	return float64(hit) / float64(all)
 }
 
-func CalcValueEfficiency(base map[int]float64, target map[int]float64) float64 {
+func CalcValueAccuracy(base map[int]float64, target map[int]float64) float64 {
 	var baseSum float64
 	var targetSum float64
 	for key := range base {
@@ -88,43 +88,60 @@ func (s *Suite) Run() map[string]StoreResult {
 	gValue := generator.GetDistribution(101, s.ValueDistribution, r)
 
 	stores := map[string]store.Store{}
+	roundKeyRateSumByStore := map[string]float64{}
 	for key, fn := range newStoreFns {
 		stores[key] = fn()
 	}
 
-	for i := 0; i < iterRounds; i++ {
-		iters := int(float64(s.DataRange) * s.NumberOfKeys)
-		for j := 0; j < iters; j++ {
+	for roundIdx := 0; roundIdx < rounds; roundIdx++ {
+		keys := int(float64(s.DataRange) * s.NumberOfKeys)
+		for keyIdx := 0; keyIdx < keys; keyIdx++ {
 			key := int(gKey.Next(r))
 			value := float64(gValue.Next(r)-1) / 100
 			for _, s := range stores {
 				s.Add(key, value)
 			}
 		}
+
 		for _, s := range stores {
 			s.FinishAdd()
 		}
+
+		// Record per-round key accuracy
+		baseResult := stores[storeIdBase].GetRoundTopNItems(finalTopN)
+		for key, s := range stores {
+			if key == storeIdBase {
+				continue
+			}
+			items := s.GetRoundTopNItems(finalTopN)
+			keyRate := CalcKeyAccuracy(baseResult, items)
+			if math.IsNaN(keyRate) {
+				keyRate = 0
+			}
+			roundKeyRateSumByStore[key] += keyRate
+		}
 	}
 
-	// Calculate effective rate
+	// Record final accuracy
 	baseResult := stores[storeIdBase].GetTopNItems(finalTopN)
 	for key, s := range stores {
 		if key == storeIdBase {
 			continue
 		}
 		items := s.GetTopNItems(finalTopN)
-		keyRate := CalcKeyEfficiency(baseResult, items)
+		keyRate := CalcKeyAccuracy(baseResult, items)
 		if math.IsNaN(keyRate) {
 			keyRate = 0
 		}
-		valueRate := CalcValueEfficiency(baseResult, items)
+		valueRate := CalcValueAccuracy(baseResult, items)
 		if math.IsNaN(valueRate) {
 			valueRate = 0
 		}
 		result[key] = StoreResult{
-			KeyRate:   keyRate,
-			ValueRate: valueRate,
-			PeakKeys:  s.GetPeakKeys(),
+			FinalKeyRate:    keyRate,
+			FinalValueRate:  valueRate,
+			AvgRoundKeyRate: roundKeyRateSumByStore[key] / rounds,
+			PeakKeys:        s.GetPeakKeys(),
 		}
 	}
 
@@ -132,9 +149,10 @@ func (s *Suite) Run() map[string]StoreResult {
 }
 
 type StoreResult struct {
-	KeyRate   float64
-	ValueRate float64
-	PeakKeys  int
+	FinalKeyRate    float64
+	FinalValueRate  float64
+	AvgRoundKeyRate float64
+	PeakKeys        int
 }
 
 func main() {
@@ -193,34 +211,38 @@ func main() {
 		fmt.Println("=================================")
 		fmt.Printf("Store %s:\n", k)
 		sort.SliceStable(resultsByStore[k], func(i, j int) bool {
-			return resultsByStore[k][i].Result.KeyRate < resultsByStore[k][j].Result.KeyRate
+			return resultsByStore[k][i].Result.FinalKeyRate < resultsByStore[k][j].Result.FinalKeyRate
 		})
 
-		totalKeyRate := 0.0
-		totalValueRate := 0.0
-		totalPeakKeys := 0
+		sumFinalKeyRate := 0.0
+		sumFinalValueRate := 0.0
+		sumPerRoundKeyRate := 0.0
+		sumPeakKeys := 0
 		maxPeakKeys := 0
 		for _, result := range resultsByStore[k] {
-			totalKeyRate += result.Result.KeyRate
-			totalValueRate += result.Result.ValueRate
-			totalPeakKeys += result.Result.PeakKeys
+			sumFinalKeyRate += result.Result.FinalKeyRate
+			sumFinalValueRate += result.Result.FinalValueRate
+			sumPerRoundKeyRate += result.Result.AvgRoundKeyRate
+			sumPeakKeys += result.Result.PeakKeys
 			if result.Result.PeakKeys > maxPeakKeys {
 				maxPeakKeys = result.Result.PeakKeys
 			}
 		}
 
-		fmt.Printf("Avg key efficiency: %f, Avg value efficiency: %f, Avg peak keys: %f, Max peak keys: %d\n",
-			totalKeyRate/float64(len(resultsByStore[k])),
-			totalValueRate/float64(len(resultsByStore[k])),
-			float64(totalPeakKeys)/float64(len(resultsByStore[k])),
+		fmt.Printf("Avg key accuracy: %f, Avg value accuracy: %f, Avg key accuracy per round: %f, Avg peak keys: %f, Max peak keys: %d\n",
+			sumFinalKeyRate/float64(len(resultsByStore[k])),
+			sumFinalValueRate/float64(len(resultsByStore[k])),
+			sumPerRoundKeyRate/float64(len(resultsByStore[k])),
+			float64(sumPeakKeys)/float64(len(resultsByStore[k])),
 			maxPeakKeys)
 		fmt.Println("Bad cases:")
 
 		for _, result := range resultsByStore[k] {
-			if result.Result.ValueRate < 0.5 || result.Result.KeyRate < 0.5 {
-				fmt.Printf("kEff=%f\tvEff=%f\tkPeak=%6d\t%s\n",
-					result.Result.KeyRate,
-					result.Result.ValueRate,
+			if result.Result.FinalValueRate < 0.5 || result.Result.FinalKeyRate < 0.5 || result.Result.AvgRoundKeyRate < 0.5 {
+				fmt.Printf("kAcc=%f\tvAcc=%f\tkAccPerRound=%f\tkPeak=%6d\t%s\n",
+					result.Result.FinalKeyRate,
+					result.Result.FinalValueRate,
+					result.Result.AvgRoundKeyRate,
 					result.Result.PeakKeys,
 					result.Suite.String())
 			}
