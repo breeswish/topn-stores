@@ -11,308 +11,912 @@
 ```
 =================================
 Store v1(top200):
-Avg key efficiency: 0.937604, Avg value efficiency: 0.996485, Avg peak keys: 148.679167, Max peak keys: 200
+Avg key accuracy: 0.936354, Avg value accuracy: 0.998491, Avg key accuracy per round: 0.501556, Avg peak keys: 148.885417, Max peak keys: 200
 Bad cases:
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=   400	keys=   400	keyDist=    hotspot	valueDist=   constant
-kEff=0.200000	vEff=0.994126	kPeak=   200	range=  1000	keys=  1000	keyDist= sequential	valueDist=    hotspot
-kEff=0.250000	vEff=0.973099	kPeak=   200	range=  1000	keys=   500	keyDist= sequential	valueDist=    uniform
-kEff=0.250000	vEff=1.000000	kPeak=   200	range=  1000	keys=  1000	keyDist= sequential	valueDist=    uniform
-kEff=0.300000	vEff=0.978695	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    zipfian
-kEff=0.300000	vEff=1.000000	kPeak=   200	range=  1000	keys=  2000	keyDist= sequential	valueDist=    uniform
-kEff=0.350000	vEff=0.993730	kPeak=   200	range=  1000	keys=   500	keyDist=    uniform	valueDist=   constant
-kEff=0.350000	vEff=0.986892	kPeak=   200	range=  1000	keys=  1000	keyDist= sequential	valueDist=    zipfian
-kEff=0.350000	vEff=0.994629	kPeak=   200	range=  1000	keys=  2000	keyDist= sequential	valueDist=    hotspot
-kEff=0.400000	vEff=0.984879	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    uniform
-kEff=0.400000	vEff=1.000000	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist= sequential
-kEff=0.400000	vEff=1.000000	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist=   constant
-kEff=0.400000	vEff=0.996304	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist= sequential
-kEff=0.450000	vEff=0.950413	kPeak=   200	range=  1000	keys=   100	keyDist=    uniform	valueDist=   constant
-kEff=0.450000	vEff=0.993963	kPeak=   200	range=  1000	keys=   100	keyDist= sequential	valueDist=    uniform
-kEff=0.450000	vEff=0.991690	kPeak=   200	range=  1000	keys=   500	keyDist=    uniform	valueDist=    uniform
-kEff=0.450000	vEff=0.984572	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist=   constant
-kEff=0.450000	vEff=1.000000	kPeak=   200	range=  1000	keys=  1000	keyDist= sequential	valueDist= sequential
+kAcc=0.100000	vAcc=1.000000	kAccPerRound=0.060833	kPeak=   200	range=  1000	keys=  2000	keyDist= sequential	valueDist=    uniform
+kAcc=0.150000	vAcc=1.000000	kAccPerRound=0.070000	kPeak=   200	range=  1000	keys=   500	keyDist= sequential	valueDist=    uniform
+kAcc=0.150000	vAcc=1.000000	kAccPerRound=0.078333	kPeak=   200	range=  1000	keys=  2000	keyDist= sequential	valueDist=    hotspot
+kAcc=0.200000	vAcc=1.000000	kAccPerRound=0.067500	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist= sequential
+kAcc=0.250000	vAcc=1.000000	kAccPerRound=0.072500	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist=   constant
+kAcc=0.300000	vAcc=0.981815	kAccPerRound=0.085833	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.300000	vAcc=0.996777	kAccPerRound=0.075833	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist= sequential
+kAcc=0.300000	vAcc=1.000000	kAccPerRound=0.047500	kPeak=   200	range=  1000	keys=  1000	keyDist= sequential	valueDist=    uniform
+kAcc=0.300000	vAcc=0.989671	kAccPerRound=0.058333	kPeak=   200	range=  1000	keys=  1000	keyDist= sequential	valueDist=    hotspot
+kAcc=0.300000	vAcc=0.990804	kAccPerRound=0.075000	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.300000	vAcc=0.972971	kAccPerRound=0.068333	kPeak=   200	range=  1000	keys=  2000	keyDist= sequential	valueDist=    zipfian
+kAcc=0.350000	vAcc=0.990144	kAccPerRound=0.083333	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    uniform
+kAcc=0.350000	vAcc=0.999095	kAccPerRound=0.065000	kPeak=   200	range=  1000	keys=  1000	keyDist= sequential	valueDist=    zipfian
+kAcc=0.400000	vAcc=0.951869	kAccPerRound=0.078333	kPeak=   200	range=  1000	keys=   500	keyDist=    uniform	valueDist= sequential
+kAcc=0.400000	vAcc=0.985220	kAccPerRound=0.091667	kPeak=   200	range=  1000	keys=   500	keyDist= sequential	valueDist=    zipfian
+kAcc=0.400000	vAcc=0.995399	kAccPerRound=0.080833	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist=   constant
+kAcc=0.400000	vAcc=0.991457	kAccPerRound=0.068333	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    uniform
+kAcc=0.450000	vAcc=0.982673	kAccPerRound=0.080000	kPeak=   200	range=  1000	keys=   500	keyDist=    uniform	valueDist=   constant
+kAcc=0.450000	vAcc=0.972317	kAccPerRound=0.083333	kPeak=   200	range=  1000	keys=   500	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.450000	vAcc=0.994326	kAccPerRound=0.091667	kPeak=   200	range=  1000	keys=   500	keyDist= sequential	valueDist=    hotspot
+kAcc=0.450000	vAcc=0.986500	kAccPerRound=0.085833	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.450000	vAcc=1.000000	kAccPerRound=0.099167	kPeak=   200	range=  1000	keys=  1000	keyDist= sequential	valueDist= sequential
+kAcc=0.500000	vAcc=0.970343	kAccPerRound=0.088333	kPeak=   200	range=  1000	keys=   500	keyDist=    uniform	valueDist=    uniform
+kAcc=0.500000	vAcc=1.000000	kAccPerRound=0.102500	kPeak=   200	range=  1000	keys=  2000	keyDist= sequential	valueDist= sequential
+kAcc=0.550000	vAcc=0.998240	kAccPerRound=0.110000	kPeak=   200	range=   400	keys=   400	keyDist= sequential	valueDist=    uniform
+kAcc=0.550000	vAcc=0.964286	kAccPerRound=0.060000	kPeak=   200	range=  1000	keys=   100	keyDist=    uniform	valueDist=   constant
+kAcc=0.550000	vAcc=0.984882	kAccPerRound=0.076667	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.600000	vAcc=0.994543	kAccPerRound=0.142500	kPeak=   200	range=   400	keys=   200	keyDist= sequential	valueDist=    uniform
+kAcc=0.600000	vAcc=0.995142	kAccPerRound=0.131667	kPeak=   200	range=   400	keys=   400	keyDist= sequential	valueDist=    zipfian
+kAcc=0.600000	vAcc=1.000000	kAccPerRound=0.114167	kPeak=   200	range=   400	keys=   800	keyDist= sequential	valueDist=    uniform
+kAcc=0.600000	vAcc=1.000000	kAccPerRound=0.124167	kPeak=   200	range=  1000	keys=   100	keyDist= sequential	valueDist=    uniform
+kAcc=0.600000	vAcc=0.977416	kAccPerRound=0.088333	kPeak=   200	range=  1000	keys=   500	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.650000	vAcc=0.992395	kAccPerRound=0.132500	kPeak=   200	range=   400	keys=   200	keyDist=    uniform	valueDist=   constant
+kAcc=0.650000	vAcc=0.996529	kAccPerRound=0.143333	kPeak=   200	range=   400	keys=   400	keyDist=    uniform	valueDist= sequential
+kAcc=0.650000	vAcc=0.997322	kAccPerRound=0.138333	kPeak=   200	range=   400	keys=   800	keyDist=    uniform	valueDist=    uniform
+kAcc=0.650000	vAcc=0.998080	kAccPerRound=0.128333	kPeak=   200	range=   400	keys=   800	keyDist=    uniform	valueDist= sequential
+kAcc=0.650000	vAcc=0.968172	kAccPerRound=0.102500	kPeak=   200	range=  1000	keys=   100	keyDist=    uniform	valueDist=    uniform
+kAcc=0.650000	vAcc=0.965654	kAccPerRound=0.106667	kPeak=   200	range=  1000	keys=   100	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.650000	vAcc=0.978185	kAccPerRound=0.098333	kPeak=   200	range=  1000	keys=   100	keyDist=    uniform	valueDist= sequential
+kAcc=0.700000	vAcc=0.993292	kAccPerRound=0.139167	kPeak=   200	range=   400	keys=   200	keyDist=    uniform	valueDist=    uniform
+kAcc=0.700000	vAcc=0.994610	kAccPerRound=0.141667	kPeak=   200	range=   400	keys=   200	keyDist=    uniform	valueDist= sequential
+kAcc=0.700000	vAcc=0.991184	kAccPerRound=0.168333	kPeak=   200	range=   400	keys=   200	keyDist= sequential	valueDist=    hotspot
+kAcc=0.700000	vAcc=0.992267	kAccPerRound=0.147500	kPeak=   200	range=   400	keys=   800	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.700000	vAcc=0.999032	kAccPerRound=0.122500	kPeak=   200	range=   400	keys=   800	keyDist= sequential	valueDist=    zipfian
+kAcc=0.700000	vAcc=0.997885	kAccPerRound=0.135833	kPeak=   200	range=   400	keys=   800	keyDist= sequential	valueDist=    hotspot
+kAcc=0.700000	vAcc=0.976007	kAccPerRound=0.114167	kPeak=   200	range=  1000	keys=   100	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.700000	vAcc=0.985190	kAccPerRound=0.124167	kPeak=   200	range=  1000	keys=   100	keyDist= sequential	valueDist=    hotspot
+kAcc=0.750000	vAcc=1.000000	kAccPerRound=0.239462	kPeak=   200	range=   201	keys=    20	keyDist=    uniform	valueDist=   constant
+kAcc=0.750000	vAcc=0.994198	kAccPerRound=0.135833	kPeak=   200	range=   400	keys=   400	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.750000	vAcc=0.996507	kAccPerRound=0.153333	kPeak=   200	range=   400	keys=   400	keyDist= sequential	valueDist=    hotspot
+kAcc=0.750000	vAcc=0.997230	kAccPerRound=0.120000	kPeak=   200	range=   400	keys=   800	keyDist=    uniform	valueDist=   constant
+kAcc=0.800000	vAcc=1.000000	kAccPerRound=0.329524	kPeak=   149	range=   150	keys=    15	keyDist=    uniform	valueDist=   constant
+kAcc=0.800000	vAcc=1.000000	kAccPerRound=0.247556	kPeak=   200	range=   200	keys=    20	keyDist=    uniform	valueDist=   constant
+kAcc=0.800000	vAcc=0.996562	kAccPerRound=0.188333	kPeak=   200	range=   400	keys=    40	keyDist= sequential	valueDist=    uniform
+kAcc=0.800000	vAcc=0.990904	kAccPerRound=0.157500	kPeak=   200	range=   400	keys=   200	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.800000	vAcc=0.992669	kAccPerRound=0.167500	kPeak=   200	range=   400	keys=   200	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.800000	vAcc=0.987941	kAccPerRound=0.150000	kPeak=   200	range=   400	keys=   400	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.800000	vAcc=1.000000	kAccPerRound=0.039167	kPeak=   200	range=   400	keys=   400	keyDist= sequential	valueDist= sequential
+kAcc=0.800000	vAcc=0.991941	kAccPerRound=0.149167	kPeak=   200	range=   400	keys=   800	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.800000	vAcc=0.998108	kAccPerRound=0.067500	kPeak=   200	range=  1000	keys=   500	keyDist= sequential	valueDist= sequential
+kAcc=0.850000	vAcc=0.978872	kAccPerRound=0.135833	kPeak=   200	range=   400	keys=    40	keyDist= sequential	valueDist=    hotspot
+kAcc=0.850000	vAcc=0.993225	kAccPerRound=0.171667	kPeak=   200	range=   400	keys=   200	keyDist= sequential	valueDist=    zipfian
+kAcc=0.850000	vAcc=0.996899	kAccPerRound=0.134167	kPeak=   200	range=   400	keys=   400	keyDist=    uniform	valueDist=   constant
+kAcc=0.850000	vAcc=0.995426	kAccPerRound=0.132500	kPeak=   200	range=   400	keys=   400	keyDist=    uniform	valueDist=    uniform
+kAcc=0.850000	vAcc=1.000000	kAccPerRound=0.055833	kPeak=   200	range=   400	keys=   800	keyDist= sequential	valueDist= sequential
+kAcc=0.850000	vAcc=0.991197	kAccPerRound=0.178333	kPeak=   200	range=  1000	keys=   100	keyDist=    hotspot	valueDist=   constant
+kAcc=0.850000	vAcc=0.986748	kAccPerRound=0.113333	kPeak=   200	range=  1000	keys=   100	keyDist= sequential	valueDist=    zipfian
+kAcc=0.900000	vAcc=1.000000	kAccPerRound=0.192500	kPeak=   200	range=   200	keys=   100	keyDist=    uniform	valueDist=   constant
+kAcc=0.900000	vAcc=1.000000	kAccPerRound=0.203333	kPeak=   200	range=   201	keys=   201	keyDist=    uniform	valueDist=   constant
+kAcc=0.900000	vAcc=0.963964	kAccPerRound=0.132500	kPeak=   200	range=   400	keys=    40	keyDist=    uniform	valueDist=   constant
+kAcc=0.900000	vAcc=0.986928	kAccPerRound=0.187500	kPeak=   200	range=   400	keys=    40	keyDist=    uniform	valueDist=    uniform
+kAcc=0.900000	vAcc=0.993393	kAccPerRound=0.160833	kPeak=   200	range=   400	keys=    40	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.900000	vAcc=1.000000	kAccPerRound=0.170833	kPeak=   200	range=   400	keys=    40	keyDist=    uniform	valueDist= sequential
+kAcc=0.900000	vAcc=1.000000	kAccPerRound=0.292500	kPeak=   200	range=   400	keys=    40	keyDist=    hotspot	valueDist=   constant
+kAcc=0.900000	vAcc=1.000000	kAccPerRound=0.076667	kPeak=   200	range=   400	keys=   200	keyDist= sequential	valueDist= sequential
+kAcc=0.900000	vAcc=0.995995	kAccPerRound=0.180833	kPeak=   200	range=  1000	keys=   100	keyDist=    hotspot	valueDist= sequential
+kAcc=0.900000	vAcc=1.000000	kAccPerRound=0.091667	kPeak=   200	range=  1000	keys=   100	keyDist= sequential	valueDist= sequential
+kAcc=0.900000	vAcc=0.999211	kAccPerRound=0.185833	kPeak=   200	range=  1000	keys=   500	keyDist=    hotspot	valueDist=   constant
+kAcc=0.900000	vAcc=0.999764	kAccPerRound=0.203333	kPeak=   200	range=  1000	keys=   500	keyDist=    hotspot	valueDist=    uniform
+kAcc=0.900000	vAcc=0.997067	kAccPerRound=0.210833	kPeak=   200	range=  1000	keys=   500	keyDist=    hotspot	valueDist=    zipfian
+kAcc=0.900000	vAcc=0.998974	kAccPerRound=0.205833	kPeak=   200	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    zipfian
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.203333	kPeak=   150	range=   150	keys=    15	keyDist= sequential	valueDist=    zipfian
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.228333	kPeak=   150	range=   150	keys=    75	keyDist=    uniform	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.239167	kPeak=   150	range=   150	keys=   150	keyDist=    uniform	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.268333	kPeak=   150	range=   150	keys=   150	keyDist= sequential	valueDist=    zipfian
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.476214	kPeak=   164	range=   200	keys=    20	keyDist=    hotspot	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.166667	kPeak=   200	range=   200	keys=    20	keyDist= sequential	valueDist=    hotspot
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.266667	kPeak=   200	range=   200	keys=    20	keyDist= sequential	valueDist= sequential
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.195833	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.480094	kPeak=   170	range=   201	keys=    20	keyDist=    hotspot	valueDist=   constant
+kAcc=0.950000	vAcc=0.999744	kAccPerRound=0.100833	kPeak=   200	range=   201	keys=   201	keyDist= sequential	valueDist= sequential
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.213333	kPeak=   200	range=   201	keys=   402	keyDist=    uniform	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.116667	kPeak=   200	range=   201	keys=   402	keyDist= sequential	valueDist= sequential
+kAcc=0.950000	vAcc=0.990120	kAccPerRound=0.154167	kPeak=   200	range=   400	keys=    40	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.950000	vAcc=0.996810	kAccPerRound=0.138333	kPeak=   200	range=   400	keys=    40	keyDist= sequential	valueDist=    zipfian
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.223333	kPeak=   200	range=   400	keys=    40	keyDist= sequential	valueDist= sequential
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.357500	kPeak=   200	range=   400	keys=   200	keyDist=    hotspot	valueDist=   constant
+kAcc=0.950000	vAcc=0.993285	kAccPerRound=0.196667	kPeak=   200	range=  1000	keys=   100	keyDist=    hotspot	valueDist=    uniform
+kAcc=0.950000	vAcc=0.993352	kAccPerRound=0.195833	kPeak=   200	range=  1000	keys=   100	keyDist=    hotspot	valueDist=    zipfian
+kAcc=0.950000	vAcc=0.999518	kAccPerRound=0.208333	kPeak=   200	range=  1000	keys=   500	keyDist=    hotspot	valueDist=    hotspot
+kAcc=0.950000	vAcc=0.999770	kAccPerRound=0.201667	kPeak=   200	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    hotspot
+kAcc=0.950000	vAcc=0.999380	kAccPerRound=0.202500	kPeak=   200	range=  1000	keys=  1000	keyDist=    hotspot	valueDist= sequential
+kAcc=0.950000	vAcc=0.998877	kAccPerRound=0.205833	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.299951	kPeak=   150	range=   150	keys=    15	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.267097	kPeak=   150	range=   150	keys=    15	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.250333	kPeak=   150	range=   150	keys=    15	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.326532	kPeak=   150	range=   150	keys=    15	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.267778	kPeak=   150	range=   150	keys=    15	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.210000	kPeak=   150	range=   150	keys=    15	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.346667	kPeak=   150	range=   150	keys=    15	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.256667	kPeak=   150	range=   150	keys=    75	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.271667	kPeak=   150	range=   150	keys=    75	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.257500	kPeak=   150	range=   150	keys=    75	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.244167	kPeak=   150	range=   150	keys=    75	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.499167	kPeak=   150	range=   150	keys=    75	keyDist=    zipfian	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.269167	kPeak=   150	range=   150	keys=    75	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.265833	kPeak=   150	range=   150	keys=    75	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.250000	kPeak=   150	range=   150	keys=    75	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.254167	kPeak=   150	range=   150	keys=    75	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.241667	kPeak=   150	range=   150	keys=   150	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.260000	kPeak=   150	range=   150	keys=   150	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.254167	kPeak=   150	range=   150	keys=   150	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.252500	kPeak=   150	range=   150	keys=   150	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.215833	kPeak=   150	range=   150	keys=   150	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.274167	kPeak=   150	range=   150	keys=   150	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.185833	kPeak=   150	range=   150	keys=   150	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.235833	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.240000	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.253333	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.240833	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.242500	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.225000	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.242500	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.262500	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.084167	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.246199	kPeak=   199	range=   200	keys=    20	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.183091	kPeak=   200	range=   200	keys=    20	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.202046	kPeak=   200	range=   200	keys=    20	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.279412	kPeak=   200	range=   200	keys=    20	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.488768	kPeak=   167	range=   200	keys=    20	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.434036	kPeak=   173	range=   200	keys=    20	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.457063	kPeak=   170	range=   200	keys=    20	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.483016	kPeak=   175	range=   200	keys=    20	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.224167	kPeak=   200	range=   200	keys=    20	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.165000	kPeak=   200	range=   200	keys=    20	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.225000	kPeak=   200	range=   200	keys=   100	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.228333	kPeak=   200	range=   200	keys=   100	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.219167	kPeak=   200	range=   200	keys=   100	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.212500	kPeak=   200	range=   200	keys=   100	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.482500	kPeak=   200	range=   200	keys=   100	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.479167	kPeak=   200	range=   200	keys=   100	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.230833	kPeak=   200	range=   200	keys=   100	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.226667	kPeak=   200	range=   200	keys=   100	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.238333	kPeak=   200	range=   200	keys=   100	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.171667	kPeak=   200	range=   200	keys=   100	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.204167	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.214167	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.227500	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.221667	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.213333	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.173333	kPeak=   200	range=   200	keys=   200	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.235833	kPeak=   200	range=   200	keys=   200	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.224167	kPeak=   200	range=   200	keys=   200	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.092500	kPeak=   200	range=   200	keys=   200	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.213333	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.214167	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.205000	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.207500	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.182500	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.208333	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.200833	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.090833	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.229400	kPeak=   200	range=   201	keys=    20	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.204545	kPeak=   200	range=   201	keys=    20	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.195439	kPeak=   200	range=   201	keys=    20	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.255569	kPeak=   200	range=   201	keys=    20	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.482446	kPeak=   167	range=   201	keys=    20	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.441255	kPeak=   163	range=   201	keys=    20	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.451472	kPeak=   169	range=   201	keys=    20	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.495028	kPeak=   163	range=   201	keys=    20	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.214167	kPeak=   200	range=   201	keys=    20	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.161667	kPeak=   200	range=   201	keys=    20	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.167500	kPeak=   200	range=   201	keys=    20	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.269167	kPeak=   200	range=   201	keys=    20	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.207500	kPeak=   200	range=   201	keys=   100	keyDist=    uniform	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.226667	kPeak=   200	range=   201	keys=   100	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.220000	kPeak=   200	range=   201	keys=   100	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.226667	kPeak=   200	range=   201	keys=   100	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.217500	kPeak=   200	range=   201	keys=   100	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.469167	kPeak=   200	range=   201	keys=   100	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.470000	kPeak=   200	range=   201	keys=   100	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.238333	kPeak=   200	range=   201	keys=   100	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.225000	kPeak=   200	range=   201	keys=   100	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.235833	kPeak=   200	range=   201	keys=   100	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=0.999835	kAccPerRound=0.338333	kPeak=   200	range=   201	keys=   100	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.200000	kPeak=   200	range=   201	keys=   201	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.228333	kPeak=   200	range=   201	keys=   201	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.234167	kPeak=   200	range=   201	keys=   201	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.214167	kPeak=   200	range=   201	keys=   201	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.188333	kPeak=   200	range=   201	keys=   201	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.224167	kPeak=   200	range=   201	keys=   201	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.225833	kPeak=   200	range=   201	keys=   201	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.211667	kPeak=   200	range=   201	keys=   402	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.223333	kPeak=   200	range=   201	keys=   402	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.199167	kPeak=   200	range=   201	keys=   402	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.206667	kPeak=   200	range=   201	keys=   402	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.179167	kPeak=   200	range=   201	keys=   402	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.195833	kPeak=   200	range=   201	keys=   402	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.213333	kPeak=   200	range=   201	keys=   402	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.446667	kPeak=   200	range=   400	keys=    40	keyDist=    zipfian	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.476667	kPeak=   200	range=   400	keys=    40	keyDist=    zipfian	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.433333	kPeak=   200	range=   400	keys=    40	keyDist=    zipfian	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.438333	kPeak=   200	range=   400	keys=    40	keyDist=    zipfian	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.459167	kPeak=   200	range=   400	keys=    40	keyDist=    zipfian	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.302500	kPeak=   200	range=   400	keys=    40	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.296667	kPeak=   200	range=   400	keys=    40	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.302500	kPeak=   200	range=   400	keys=    40	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.310000	kPeak=   200	range=   400	keys=    40	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.364167	kPeak=   200	range=   400	keys=   200	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.330833	kPeak=   200	range=   400	keys=   200	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.327500	kPeak=   200	range=   400	keys=   200	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.345000	kPeak=   200	range=   400	keys=   200	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.349167	kPeak=   200	range=   400	keys=   400	keyDist=    hotspot	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.349167	kPeak=   200	range=   400	keys=   400	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.365000	kPeak=   200	range=   400	keys=   400	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.356667	kPeak=   200	range=   400	keys=   400	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.347500	kPeak=   200	range=   400	keys=   400	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.364167	kPeak=   200	range=   400	keys=   800	keyDist=    hotspot	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.355833	kPeak=   200	range=   400	keys=   800	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.375833	kPeak=   200	range=   400	keys=   800	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.350000	kPeak=   200	range=   400	keys=   800	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.364167	kPeak=   200	range=   400	keys=   800	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=0.999848	kAccPerRound=0.476667	kPeak=   200	range=  1000	keys=   100	keyDist=    zipfian	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.450833	kPeak=   200	range=  1000	keys=   100	keyDist=    zipfian	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.475000	kPeak=   200	range=  1000	keys=   100	keyDist=    zipfian	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.490000	kPeak=   200	range=  1000	keys=   100	keyDist=    zipfian	valueDist= sequential
+kAcc=1.000000	vAcc=0.993098	kAccPerRound=0.202500	kPeak=   200	range=  1000	keys=   100	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=0.999365	kAccPerRound=0.205833	kPeak=   200	range=  1000	keys=   500	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.204167	kPeak=   200	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=   constant
+kAcc=1.000000	vAcc=0.999392	kAccPerRound=0.195000	kPeak=   200	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=0.999711	kAccPerRound=0.190833	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=   constant
+kAcc=1.000000	vAcc=0.999867	kAccPerRound=0.203333	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=0.998601	kAccPerRound=0.213333	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=0.999488	kAccPerRound=0.207500	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist= sequential
 
 =================================
 Store v1(top2000):
-Avg key efficiency: 0.993854, Avg value efficiency: 0.997917, Avg peak keys: 301.716667, Max peak keys: 1000
+Avg key accuracy: 0.994375, Avg value accuracy: 1.000000, Avg key accuracy per round: 0.503408, Avg peak keys: 301.837500, Max peak keys: 1000
 Bad cases:
-kEff=0.000000	vEff=0.000000	kPeak=   400	range=   400	keys=   400	keyDist=    hotspot	valueDist=   constant
+kAcc=0.750000	vAcc=1.000000	kAccPerRound=0.239506	kPeak=   201	range=   201	keys=    20	keyDist=    uniform	valueDist=   constant
+kAcc=0.800000	vAcc=1.000000	kAccPerRound=0.250383	kPeak=   200	range=   200	keys=    20	keyDist=    uniform	valueDist=   constant
+kAcc=0.850000	vAcc=1.000000	kAccPerRound=0.315623	kPeak=   149	range=   150	keys=    15	keyDist=    uniform	valueDist=   constant
+kAcc=0.850000	vAcc=1.000000	kAccPerRound=0.078333	kPeak=   997	range=  1000	keys=   100	keyDist=    uniform	valueDist=   constant
+kAcc=0.900000	vAcc=1.000000	kAccPerRound=0.467736	kPeak=   164	range=   200	keys=    20	keyDist=    hotspot	valueDist=   constant
+kAcc=0.900000	vAcc=1.000000	kAccPerRound=0.192500	kPeak=   200	range=   200	keys=   100	keyDist=    uniform	valueDist=   constant
+kAcc=0.900000	vAcc=1.000000	kAccPerRound=0.078333	kPeak=   400	range=   400	keys=   200	keyDist= sequential	valueDist= sequential
+kAcc=0.900000	vAcc=1.000000	kAccPerRound=0.145000	kPeak=   400	range=   400	keys=   400	keyDist=    uniform	valueDist=   constant
+kAcc=0.900000	vAcc=1.000000	kAccPerRound=0.184167	kPeak=   833	range=  1000	keys=   100	keyDist=    hotspot	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.206667	kPeak=   150	range=   150	keys=    15	keyDist= sequential	valueDist=    zipfian
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.223333	kPeak=   150	range=   150	keys=    75	keyDist=    uniform	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.268333	kPeak=   150	range=   150	keys=   150	keyDist= sequential	valueDist=    zipfian
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.235000	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.196667	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.480907	kPeak=   170	range=   201	keys=    20	keyDist=    hotspot	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.205833	kPeak=   201	range=   201	keys=   201	keyDist=    uniform	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.234167	kPeak=   201	range=   201	keys=   201	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.100833	kPeak=   201	range=   201	keys=   201	keyDist= sequential	valueDist= sequential
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.116667	kPeak=   201	range=   201	keys=   402	keyDist= sequential	valueDist= sequential
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.139167	kPeak=   400	range=   400	keys=    40	keyDist=    uniform	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.292500	kPeak=   333	range=   400	keys=    40	keyDist=    hotspot	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.224167	kPeak=   400	range=   400	keys=    40	keyDist= sequential	valueDist= sequential
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.137500	kPeak=   400	range=   400	keys=   200	keyDist=    uniform	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.356667	kPeak=   400	range=   400	keys=   200	keyDist=    hotspot	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.039167	kPeak=   400	range=   400	keys=   400	keyDist= sequential	valueDist= sequential
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.130833	kPeak=   400	range=   400	keys=   800	keyDist=    uniform	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.055833	kPeak=   400	range=   400	keys=   800	keyDist= sequential	valueDist= sequential
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.093333	kPeak=  1000	range=  1000	keys=   100	keyDist= sequential	valueDist= sequential
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.197500	kPeak=  1000	range=  1000	keys=   500	keyDist=    hotspot	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.046667	kPeak=  1000	range=  1000	keys=   500	keyDist= sequential	valueDist= sequential
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.093333	kPeak=  1000	range=  1000	keys=  1000	keyDist=    uniform	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.053333	kPeak=  1000	range=  1000	keys=  1000	keyDist= sequential	valueDist= sequential
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.101667	kPeak=  1000	range=  1000	keys=  2000	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.299951	kPeak=   150	range=   150	keys=    15	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.265907	kPeak=   150	range=   150	keys=    15	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.251615	kPeak=   150	range=   150	keys=    15	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.326532	kPeak=   150	range=   150	keys=    15	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.267778	kPeak=   150	range=   150	keys=    15	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.208889	kPeak=   150	range=   150	keys=    15	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.344444	kPeak=   150	range=   150	keys=    15	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.255833	kPeak=   150	range=   150	keys=    75	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.272500	kPeak=   150	range=   150	keys=    75	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.257500	kPeak=   150	range=   150	keys=    75	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.243333	kPeak=   150	range=   150	keys=    75	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.499167	kPeak=   150	range=   150	keys=    75	keyDist=    zipfian	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.269167	kPeak=   150	range=   150	keys=    75	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.264167	kPeak=   150	range=   150	keys=    75	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.250000	kPeak=   150	range=   150	keys=    75	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.254167	kPeak=   150	range=   150	keys=    75	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.240833	kPeak=   150	range=   150	keys=   150	keyDist=    uniform	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.241667	kPeak=   150	range=   150	keys=   150	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.260000	kPeak=   150	range=   150	keys=   150	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.254167	kPeak=   150	range=   150	keys=   150	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.252500	kPeak=   150	range=   150	keys=   150	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.215833	kPeak=   150	range=   150	keys=   150	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.273333	kPeak=   150	range=   150	keys=   150	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.185833	kPeak=   150	range=   150	keys=   150	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.240000	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.253333	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.240833	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.242500	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.225000	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.242500	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.262500	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.084167	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.246199	kPeak=   199	range=   200	keys=    20	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.184850	kPeak=   200	range=   200	keys=    20	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.202046	kPeak=   200	range=   200	keys=    20	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.279412	kPeak=   200	range=   200	keys=    20	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.487788	kPeak=   167	range=   200	keys=    20	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.434036	kPeak=   173	range=   200	keys=    20	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.458174	kPeak=   170	range=   200	keys=    20	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.483016	kPeak=   175	range=   200	keys=    20	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.224167	kPeak=   200	range=   200	keys=    20	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.165000	kPeak=   200	range=   200	keys=    20	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.166667	kPeak=   200	range=   200	keys=    20	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.264167	kPeak=   200	range=   200	keys=    20	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.225833	kPeak=   200	range=   200	keys=   100	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.228333	kPeak=   200	range=   200	keys=   100	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.219167	kPeak=   200	range=   200	keys=   100	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.212500	kPeak=   200	range=   200	keys=   100	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.483333	kPeak=   200	range=   200	keys=   100	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.479167	kPeak=   200	range=   200	keys=   100	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.229167	kPeak=   200	range=   200	keys=   100	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.227500	kPeak=   200	range=   200	keys=   100	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.239167	kPeak=   200	range=   200	keys=   100	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.173333	kPeak=   200	range=   200	keys=   100	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.209167	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.214167	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.227500	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.221667	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.213333	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.173333	kPeak=   200	range=   200	keys=   200	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.235833	kPeak=   200	range=   200	keys=   200	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.224167	kPeak=   200	range=   200	keys=   200	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.092500	kPeak=   200	range=   200	keys=   200	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.213333	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.214167	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.205000	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.207500	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.182500	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.207500	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.200833	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.090833	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.231067	kPeak=   200	range=   201	keys=    20	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.204545	kPeak=   201	range=   201	keys=    20	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.195439	kPeak=   201	range=   201	keys=    20	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.254736	kPeak=   200	range=   201	keys=    20	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.482446	kPeak=   167	range=   201	keys=    20	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.441186	kPeak=   163	range=   201	keys=    20	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.451472	kPeak=   169	range=   201	keys=    20	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.496831	kPeak=   163	range=   201	keys=    20	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.214167	kPeak=   201	range=   201	keys=    20	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.160833	kPeak=   201	range=   201	keys=    20	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.167500	kPeak=   201	range=   201	keys=    20	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.269167	kPeak=   201	range=   201	keys=    20	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.213333	kPeak=   201	range=   201	keys=   100	keyDist=    uniform	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.226667	kPeak=   201	range=   201	keys=   100	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.220833	kPeak=   201	range=   201	keys=   100	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.225833	kPeak=   201	range=   201	keys=   100	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.217500	kPeak=   201	range=   201	keys=   100	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.470000	kPeak=   201	range=   201	keys=   100	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.469167	kPeak=   201	range=   201	keys=   100	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.238333	kPeak=   201	range=   201	keys=   100	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.225000	kPeak=   201	range=   201	keys=   100	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.236667	kPeak=   201	range=   201	keys=   100	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.340000	kPeak=   201	range=   201	keys=   100	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.200000	kPeak=   201	range=   201	keys=   201	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.228333	kPeak=   201	range=   201	keys=   201	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.214167	kPeak=   201	range=   201	keys=   201	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.188333	kPeak=   201	range=   201	keys=   201	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.223333	kPeak=   201	range=   201	keys=   201	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.225833	kPeak=   201	range=   201	keys=   201	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.210000	kPeak=   201	range=   201	keys=   402	keyDist=    uniform	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.211667	kPeak=   201	range=   201	keys=   402	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.223333	kPeak=   201	range=   201	keys=   402	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.200000	kPeak=   201	range=   201	keys=   402	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.206667	kPeak=   201	range=   201	keys=   402	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.180000	kPeak=   201	range=   201	keys=   402	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.195833	kPeak=   201	range=   201	keys=   402	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.213333	kPeak=   201	range=   201	keys=   402	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.190833	kPeak=   398	range=   400	keys=    40	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.161667	kPeak=   400	range=   400	keys=    40	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.156667	kPeak=   398	range=   400	keys=    40	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.177500	kPeak=   398	range=   400	keys=    40	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.446667	kPeak=   335	range=   400	keys=    40	keyDist=    zipfian	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.476667	kPeak=   325	range=   400	keys=    40	keyDist=    zipfian	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.433333	kPeak=   327	range=   400	keys=    40	keyDist=    zipfian	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.438333	kPeak=   324	range=   400	keys=    40	keyDist=    zipfian	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.458333	kPeak=   336	range=   400	keys=    40	keyDist=    zipfian	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.302500	kPeak=   331	range=   400	keys=    40	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.296667	kPeak=   320	range=   400	keys=    40	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.302500	kPeak=   330	range=   400	keys=    40	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.310000	kPeak=   327	range=   400	keys=    40	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.200833	kPeak=   400	range=   400	keys=    40	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.146667	kPeak=   400	range=   400	keys=    40	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.141667	kPeak=   400	range=   400	keys=    40	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.143333	kPeak=   400	range=   400	keys=   200	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.172500	kPeak=   400	range=   400	keys=   200	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.178333	kPeak=   400	range=   400	keys=   200	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.152500	kPeak=   400	range=   400	keys=   200	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.364167	kPeak=   400	range=   400	keys=   200	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.330833	kPeak=   400	range=   400	keys=   200	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.328333	kPeak=   399	range=   400	keys=   200	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.345000	kPeak=   400	range=   400	keys=   200	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.151667	kPeak=   400	range=   400	keys=   200	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.178333	kPeak=   400	range=   400	keys=   200	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.180833	kPeak=   400	range=   400	keys=   200	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.142500	kPeak=   400	range=   400	keys=   400	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.146667	kPeak=   400	range=   400	keys=   400	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.159167	kPeak=   400	range=   400	keys=   400	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.162500	kPeak=   400	range=   400	keys=   400	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.350000	kPeak=   400	range=   400	keys=   400	keyDist=    hotspot	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.349167	kPeak=   400	range=   400	keys=   400	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.365000	kPeak=   400	range=   400	keys=   400	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.356667	kPeak=   400	range=   400	keys=   400	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.347500	kPeak=   400	range=   400	keys=   400	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.114167	kPeak=   400	range=   400	keys=   400	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.145000	kPeak=   400	range=   400	keys=   400	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.156667	kPeak=   400	range=   400	keys=   400	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.155000	kPeak=   400	range=   400	keys=   800	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.153333	kPeak=   400	range=   400	keys=   800	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.156667	kPeak=   400	range=   400	keys=   800	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.142500	kPeak=   400	range=   400	keys=   800	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.364167	kPeak=   400	range=   400	keys=   800	keyDist=    hotspot	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.355833	kPeak=   400	range=   400	keys=   800	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.375833	kPeak=   400	range=   400	keys=   800	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.349167	kPeak=   400	range=   400	keys=   800	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.364167	kPeak=   400	range=   400	keys=   800	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.124167	kPeak=   400	range=   400	keys=   800	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.136667	kPeak=   400	range=   400	keys=   800	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.143333	kPeak=   400	range=   400	keys=   800	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.118333	kPeak=   999	range=  1000	keys=   100	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.130000	kPeak=   997	range=  1000	keys=   100	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.123333	kPeak=   997	range=  1000	keys=   100	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.106667	kPeak=  1000	range=  1000	keys=   100	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.476667	kPeak=   789	range=  1000	keys=   100	keyDist=    zipfian	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.450833	kPeak=   789	range=  1000	keys=   100	keyDist=    zipfian	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.475000	kPeak=   800	range=  1000	keys=   100	keyDist=    zipfian	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.489167	kPeak=   806	range=  1000	keys=   100	keyDist=    zipfian	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.198333	kPeak=   834	range=  1000	keys=   100	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.200000	kPeak=   820	range=  1000	keys=   100	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.205833	kPeak=   828	range=  1000	keys=   100	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.184167	kPeak=   805	range=  1000	keys=   100	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.164167	kPeak=  1000	range=  1000	keys=   100	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.131667	kPeak=  1000	range=  1000	keys=   100	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.149167	kPeak=  1000	range=  1000	keys=   100	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.100833	kPeak=  1000	range=  1000	keys=   500	keyDist=    uniform	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.100000	kPeak=  1000	range=  1000	keys=   500	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.109167	kPeak=  1000	range=  1000	keys=   500	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.107500	kPeak=  1000	range=  1000	keys=   500	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.100833	kPeak=  1000	range=  1000	keys=   500	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.207500	kPeak=   998	range=  1000	keys=   500	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.215833	kPeak=   999	range=  1000	keys=   500	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.207500	kPeak=  1000	range=  1000	keys=   500	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.207500	kPeak=   999	range=  1000	keys=   500	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.096667	kPeak=  1000	range=  1000	keys=   500	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.122500	kPeak=  1000	range=  1000	keys=   500	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.120000	kPeak=  1000	range=  1000	keys=   500	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.088333	kPeak=  1000	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.110000	kPeak=  1000	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.108333	kPeak=  1000	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.096667	kPeak=  1000	range=  1000	keys=  1000	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.210000	kPeak=  1000	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.196667	kPeak=  1000	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.210000	kPeak=  1000	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.208333	kPeak=  1000	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.207500	kPeak=  1000	range=  1000	keys=  1000	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.058333	kPeak=  1000	range=  1000	keys=  1000	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.074167	kPeak=  1000	range=  1000	keys=  1000	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.072500	kPeak=  1000	range=  1000	keys=  1000	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.084167	kPeak=  1000	range=  1000	keys=  2000	keyDist=    uniform	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.105000	kPeak=  1000	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.103333	kPeak=  1000	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.096667	kPeak=  1000	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.079167	kPeak=  1000	range=  1000	keys=  2000	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.190000	kPeak=  1000	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.202500	kPeak=  1000	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.206667	kPeak=  1000	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.211667	kPeak=  1000	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.209167	kPeak=  1000	range=  1000	keys=  2000	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.078333	kPeak=  1000	range=  1000	keys=  2000	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.085000	kPeak=  1000	range=  1000	keys=  2000	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.104167	kPeak=  1000	range=  1000	keys=  2000	keyDist= sequential	valueDist=    hotspot
 
 =================================
 Store v2(top200):
-Avg key efficiency: 0.737813, Avg value efficiency: 0.776813, Avg peak keys: 148.679167, Max peak keys: 200
+Avg key accuracy: 0.743021, Avg value accuracy: 0.780095, Avg key accuracy per round: 0.459178, Avg peak keys: 148.885417, Max peak keys: 200
 Bad cases:
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=   400	keys=   200	keyDist=    zipfian	valueDist=    uniform
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=   400	keys=   200	keyDist= sequential	valueDist= sequential
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=   400	keys=   400	keyDist=    hotspot	valueDist=   constant
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=   400	keys=   400	keyDist=    hotspot	valueDist=    uniform
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=   400	keys=   800	keyDist=    zipfian	valueDist=    zipfian
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=   400	keys=   800	keyDist=    zipfian	valueDist= sequential
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=   400	keys=   800	keyDist= sequential	valueDist= sequential
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=   100	keyDist=    uniform	valueDist=   constant
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=   100	keyDist= sequential	valueDist= sequential
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=   500	keyDist=    uniform	valueDist= sequential
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=   500	keyDist=    zipfian	valueDist=    uniform
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=   500	keyDist=    zipfian	valueDist=    zipfian
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=   500	keyDist=    zipfian	valueDist=    hotspot
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=   500	keyDist=    zipfian	valueDist= sequential
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=   500	keyDist=    hotspot	valueDist=    uniform
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=   500	keyDist=    hotspot	valueDist=    zipfian
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=   500	keyDist=    hotspot	valueDist=    hotspot
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=   500	keyDist=    hotspot	valueDist= sequential
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=   500	keyDist= sequential	valueDist= sequential
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    uniform
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist= sequential
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  1000	keyDist=    zipfian	valueDist=    uniform
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  1000	keyDist=    zipfian	valueDist=    zipfian
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  1000	keyDist=    zipfian	valueDist=    hotspot
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  1000	keyDist=    zipfian	valueDist= sequential
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    uniform
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    zipfian
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  1000	keyDist=    hotspot	valueDist= sequential
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  1000	keyDist= sequential	valueDist=    uniform
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  1000	keyDist= sequential	valueDist= sequential
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  2000	keyDist=    zipfian	valueDist=    uniform
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  2000	keyDist=    zipfian	valueDist=    zipfian
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  2000	keyDist=    zipfian	valueDist=    hotspot
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  2000	keyDist=    zipfian	valueDist= sequential
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    uniform
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    zipfian
-kEff=0.000000	vEff=0.000000	kPeak=   200	range=  1000	keys=  2000	keyDist= sequential	valueDist= sequential
-kEff=0.050000	vEff=1.000000	kPeak=   200	range=   201	keys=   201	keyDist=    uniform	valueDist=   constant
-kEff=0.050000	vEff=0.583333	kPeak=   200	range=   400	keys=    40	keyDist=    uniform	valueDist=   constant
-kEff=0.050000	vEff=0.111416	kPeak=   200	range=   400	keys=   400	keyDist=    zipfian	valueDist= sequential
-kEff=0.050000	vEff=0.059310	kPeak=   200	range=   400	keys=   400	keyDist=    hotspot	valueDist= sequential
-kEff=0.050000	vEff=0.225704	kPeak=   200	range=   400	keys=   800	keyDist=    uniform	valueDist= sequential
-kEff=0.050000	vEff=0.072589	kPeak=   200	range=   400	keys=   800	keyDist=    zipfian	valueDist=    uniform
-kEff=0.050000	vEff=0.264990	kPeak=   200	range=   400	keys=   800	keyDist=    hotspot	valueDist=   constant
-kEff=0.050000	vEff=0.077194	kPeak=   200	range=   400	keys=   800	keyDist=    hotspot	valueDist=    uniform
-kEff=0.050000	vEff=0.044921	kPeak=   200	range=   400	keys=   800	keyDist=    hotspot	valueDist= sequential
-kEff=0.050000	vEff=0.426087	kPeak=   200	range=   400	keys=   800	keyDist= sequential	valueDist=    uniform
-kEff=0.050000	vEff=0.718944	kPeak=   200	range=  1000	keys=   100	keyDist=    uniform	valueDist=    uniform
-kEff=0.050000	vEff=0.694779	kPeak=   200	range=  1000	keys=   100	keyDist=    uniform	valueDist= sequential
-kEff=0.050000	vEff=0.171843	kPeak=   200	range=  1000	keys=   100	keyDist=    zipfian	valueDist=    uniform
-kEff=0.050000	vEff=0.234266	kPeak=   200	range=  1000	keys=   100	keyDist=    zipfian	valueDist=    zipfian
-kEff=0.050000	vEff=0.112684	kPeak=   200	range=  1000	keys=   100	keyDist=    zipfian	valueDist= sequential
-kEff=0.050000	vEff=0.168428	kPeak=   200	range=  1000	keys=   100	keyDist=    hotspot	valueDist=    uniform
-kEff=0.050000	vEff=0.066667	kPeak=   200	range=  1000	keys=   500	keyDist=    uniform	valueDist=   constant
-kEff=0.050000	vEff=0.254530	kPeak=   200	range=  1000	keys=   500	keyDist=    uniform	valueDist=    uniform
-kEff=0.050000	vEff=0.088235	kPeak=   200	range=  1000	keys=   500	keyDist=    hotspot	valueDist=   constant
-kEff=0.050000	vEff=0.185445	kPeak=   200	range=  1000	keys=   500	keyDist= sequential	valueDist=    uniform
-kEff=0.050000	vEff=0.038462	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist=   constant
-kEff=0.050000	vEff=0.191925	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    hotspot
-kEff=0.050000	vEff=0.045853	kPeak=   200	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    hotspot
-kEff=0.050000	vEff=0.127632	kPeak=   200	range=  1000	keys=  1000	keyDist= sequential	valueDist=    hotspot
-kEff=0.050000	vEff=0.081081	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist=   constant
-kEff=0.050000	vEff=0.149967	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    uniform
-kEff=0.050000	vEff=0.101270	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    hotspot
-kEff=0.050000	vEff=0.023166	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=   constant
-kEff=0.050000	vEff=0.031977	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    hotspot
-kEff=0.050000	vEff=0.037666	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist= sequential
-kEff=0.050000	vEff=0.131252	kPeak=   200	range=  1000	keys=  2000	keyDist= sequential	valueDist=    uniform
-kEff=0.050000	vEff=0.156375	kPeak=   200	range=  1000	keys=  2000	keyDist= sequential	valueDist=    hotspot
-kEff=0.100000	vEff=0.345679	kPeak=   200	range=   400	keys=   200	keyDist=    uniform	valueDist=   constant
-kEff=0.100000	vEff=0.412095	kPeak=   200	range=   400	keys=   200	keyDist=    zipfian	valueDist=    hotspot
-kEff=0.100000	vEff=0.217724	kPeak=   200	range=   400	keys=   200	keyDist=    hotspot	valueDist=    uniform
-kEff=0.100000	vEff=0.369248	kPeak=   200	range=   400	keys=   400	keyDist=    uniform	valueDist= sequential
-kEff=0.100000	vEff=0.102228	kPeak=   200	range=   400	keys=   400	keyDist=    zipfian	valueDist=    uniform
-kEff=0.100000	vEff=0.184978	kPeak=   200	range=   400	keys=   400	keyDist=    zipfian	valueDist=    zipfian
-kEff=0.100000	vEff=0.286326	kPeak=   200	range=   400	keys=   400	keyDist= sequential	valueDist= sequential
-kEff=0.100000	vEff=0.155235	kPeak=   200	range=   400	keys=   800	keyDist=    uniform	valueDist=   constant
-kEff=0.100000	vEff=0.497461	kPeak=   200	range=   400	keys=   800	keyDist=    uniform	valueDist=    uniform
-kEff=0.100000	vEff=0.038888	kPeak=   200	range=   400	keys=   800	keyDist=    zipfian	valueDist=    hotspot
-kEff=0.100000	vEff=0.095131	kPeak=   200	range=   400	keys=   800	keyDist=    hotspot	valueDist=    zipfian
-kEff=0.100000	vEff=0.616533	kPeak=   200	range=  1000	keys=   100	keyDist=    hotspot	valueDist=    zipfian
-kEff=0.100000	vEff=0.322270	kPeak=   200	range=  1000	keys=   500	keyDist=    uniform	valueDist=    zipfian
-kEff=0.100000	vEff=0.041748	kPeak=   200	range=  1000	keys=   500	keyDist=    zipfian	valueDist=   constant
-kEff=0.100000	vEff=0.394694	kPeak=   200	range=  1000	keys=   500	keyDist= sequential	valueDist=    hotspot
-kEff=0.100000	vEff=0.485929	kPeak=   200	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=   constant
-kEff=0.100000	vEff=0.136938	kPeak=   200	range=  1000	keys=  1000	keyDist= sequential	valueDist=    zipfian
-kEff=0.100000	vEff=0.071032	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist= sequential
-kEff=0.100000	vEff=0.186894	kPeak=   200	range=  1000	keys=  2000	keyDist= sequential	valueDist=    zipfian
-kEff=0.150000	vEff=0.638761	kPeak=   200	range=   400	keys=   200	keyDist=    uniform	valueDist= sequential
-kEff=0.150000	vEff=0.079143	kPeak=   200	range=   400	keys=   200	keyDist=    zipfian	valueDist= sequential
-kEff=0.150000	vEff=0.089301	kPeak=   200	range=   400	keys=   200	keyDist=    hotspot	valueDist= sequential
-kEff=0.150000	vEff=0.036075	kPeak=   200	range=   400	keys=   400	keyDist=    zipfian	valueDist=    hotspot
-kEff=0.150000	vEff=0.173189	kPeak=   200	range=   400	keys=   400	keyDist=    hotspot	valueDist=    zipfian
-kEff=0.150000	vEff=0.216656	kPeak=   200	range=   400	keys=   400	keyDist= sequential	valueDist=    uniform
-kEff=0.150000	vEff=0.174728	kPeak=   200	range=  1000	keys=   100	keyDist=    hotspot	valueDist= sequential
-kEff=0.150000	vEff=0.316652	kPeak=   200	range=  1000	keys=   500	keyDist=    uniform	valueDist=    hotspot
-kEff=0.150000	vEff=0.203996	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    zipfian
-kEff=0.200000	vEff=0.113208	kPeak=   200	range=   400	keys=   200	keyDist=    hotspot	valueDist=   constant
-kEff=0.200000	vEff=0.577185	kPeak=   200	range=   400	keys=   400	keyDist=    uniform	valueDist=    uniform
-kEff=0.200000	vEff=0.484167	kPeak=   200	range=   400	keys=   800	keyDist=    uniform	valueDist=    zipfian
-kEff=0.200000	vEff=0.510552	kPeak=   200	range=   400	keys=   800	keyDist=    uniform	valueDist=    hotspot
-kEff=0.250000	vEff=0.721473	kPeak=   200	range=   201	keys=   201	keyDist=    zipfian	valueDist=   constant
-kEff=0.250000	vEff=0.593323	kPeak=   200	range=   400	keys=   200	keyDist=    uniform	valueDist=    uniform
-kEff=0.250000	vEff=0.062349	kPeak=   200	range=   400	keys=   200	keyDist=    zipfian	valueDist=   constant
-kEff=0.250000	vEff=0.185172	kPeak=   200	range=   400	keys=   200	keyDist=    zipfian	valueDist=    zipfian
-kEff=0.250000	vEff=0.166227	kPeak=   200	range=   400	keys=   400	keyDist=    uniform	valueDist=   constant
-kEff=0.250000	vEff=0.712312	kPeak=   200	range=   400	keys=   400	keyDist=    uniform	valueDist=    zipfian
-kEff=0.250000	vEff=0.029004	kPeak=   200	range=   400	keys=   800	keyDist=    zipfian	valueDist=   constant
-kEff=0.250000	vEff=0.284395	kPeak=   200	range=  1000	keys=   100	keyDist=    zipfian	valueDist=    hotspot
-kEff=0.250000	vEff=0.171779	kPeak=   200	range=  1000	keys=   100	keyDist=    hotspot	valueDist=   constant
-kEff=0.250000	vEff=0.584071	kPeak=   200	range=  1000	keys=   100	keyDist=    hotspot	valueDist=    hotspot
-kEff=0.250000	vEff=0.187006	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    zipfian
-kEff=0.300000	vEff=0.358668	kPeak=   200	range=   201	keys=   201	keyDist=    hotspot	valueDist=   constant
-kEff=0.300000	vEff=0.503647	kPeak=   200	range=   201	keys=   402	keyDist=    hotspot	valueDist=   constant
-kEff=0.300000	vEff=0.263817	kPeak=   200	range=   400	keys=   400	keyDist=    hotspot	valueDist=    hotspot
-kEff=0.300000	vEff=0.748810	kPeak=   200	range=   400	keys=   400	keyDist= sequential	valueDist=    zipfian
-kEff=0.300000	vEff=0.598304	kPeak=   200	range=   400	keys=   400	keyDist= sequential	valueDist=    hotspot
-kEff=0.300000	vEff=0.136964	kPeak=   200	range=   400	keys=   800	keyDist=    hotspot	valueDist=    hotspot
-kEff=0.300000	vEff=0.405484	kPeak=   200	range=   400	keys=   800	keyDist= sequential	valueDist=    zipfian
-kEff=0.300000	vEff=0.762834	kPeak=   200	range=  1000	keys=   100	keyDist=    uniform	valueDist=    zipfian
-kEff=0.300000	vEff=0.784295	kPeak=   200	range=  1000	keys=   100	keyDist=    uniform	valueDist=    hotspot
-kEff=0.300000	vEff=0.335690	kPeak=   200	range=  1000	keys=   500	keyDist= sequential	valueDist=    zipfian
-kEff=0.350000	vEff=1.000000	kPeak=   200	range=   201	keys=   100	keyDist=    hotspot	valueDist=   constant
-kEff=0.350000	vEff=0.159167	kPeak=   200	range=   201	keys=   402	keyDist=    zipfian	valueDist=   constant
-kEff=0.350000	vEff=0.919900	kPeak=   200	range=   400	keys=    40	keyDist=    uniform	valueDist= sequential
-kEff=0.350000	vEff=0.872637	kPeak=   200	range=   400	keys=   200	keyDist=    uniform	valueDist=    zipfian
-kEff=0.350000	vEff=0.511027	kPeak=   200	range=   400	keys=   800	keyDist= sequential	valueDist=    hotspot
-kEff=0.400000	vEff=0.940239	kPeak=   200	range=   400	keys=    40	keyDist=    hotspot	valueDist=   constant
-kEff=0.400000	vEff=0.574748	kPeak=   200	range=   400	keys=   200	keyDist= sequential	valueDist=    uniform
-kEff=0.400000	vEff=0.748881	kPeak=   200	range=  1000	keys=   100	keyDist= sequential	valueDist=    uniform
-kEff=0.450000	vEff=0.877375	kPeak=   200	range=   400	keys=    40	keyDist=    uniform	valueDist=    uniform
-kEff=0.450000	vEff=0.344519	kPeak=   200	range=   400	keys=   200	keyDist=    hotspot	valueDist=    zipfian
-kEff=0.450000	vEff=0.032364	kPeak=   200	range=   400	keys=   400	keyDist=    zipfian	valueDist=   constant
-kEff=0.450000	vEff=0.907319	kPeak=   200	range=  1000	keys=   100	keyDist= sequential	valueDist=    hotspot
-kEff=0.600000	vEff=0.157219	kPeak=   200	range=   400	keys=    40	keyDist=    zipfian	valueDist=   constant
-kEff=0.600000	vEff=0.315463	kPeak=   200	range=   400	keys=   200	keyDist=    hotspot	valueDist=    hotspot
-kEff=0.600000	vEff=0.057496	kPeak=   200	range=  1000	keys=  2000	keyDist=    zipfian	valueDist=   constant
-kEff=0.750000	vEff=0.420935	kPeak=   200	range=  1000	keys=   100	keyDist=    zipfian	valueDist=   constant
-kEff=0.750000	vEff=0.123973	kPeak=   200	range=  1000	keys=  1000	keyDist=    zipfian	valueDist=   constant
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.050000	kPeak=   200	range=   400	keys=   200	keyDist= sequential	valueDist= sequential
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.149167	kPeak=   200	range=   400	keys=   800	keyDist=    zipfian	valueDist=    uniform
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.137500	kPeak=   200	range=   400	keys=   800	keyDist=    zipfian	valueDist= sequential
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.015833	kPeak=   200	range=   400	keys=   800	keyDist= sequential	valueDist= sequential
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.200000	kPeak=   200	range=  1000	keys=   100	keyDist=    zipfian	valueDist=    uniform
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.223333	kPeak=   200	range=  1000	keys=   100	keyDist=    zipfian	valueDist= sequential
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.167500	kPeak=   200	range=  1000	keys=   100	keyDist=    hotspot	valueDist= sequential
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.097500	kPeak=   200	range=  1000	keys=   100	keyDist= sequential	valueDist= sequential
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.092500	kPeak=   200	range=  1000	keys=   500	keyDist=    uniform	valueDist= sequential
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.092500	kPeak=   200	range=  1000	keys=   500	keyDist=    zipfian	valueDist=    uniform
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.130833	kPeak=   200	range=  1000	keys=   500	keyDist=    zipfian	valueDist=    hotspot
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.091667	kPeak=   200	range=  1000	keys=   500	keyDist=    zipfian	valueDist= sequential
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.150833	kPeak=   200	range=  1000	keys=   500	keyDist=    hotspot	valueDist=    uniform
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.174167	kPeak=   200	range=  1000	keys=   500	keyDist=    hotspot	valueDist=    zipfian
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.167500	kPeak=   200	range=  1000	keys=   500	keyDist=    hotspot	valueDist=    hotspot
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.113333	kPeak=   200	range=  1000	keys=   500	keyDist= sequential	valueDist=    uniform
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.025000	kPeak=   200	range=  1000	keys=   500	keyDist= sequential	valueDist= sequential
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.186667	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist=   constant
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.107500	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    uniform
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.099167	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist= sequential
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.023333	kPeak=   200	range=  1000	keys=  1000	keyDist=    zipfian	valueDist=    uniform
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.105833	kPeak=   200	range=  1000	keys=  1000	keyDist=    zipfian	valueDist=    zipfian
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.092500	kPeak=   200	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    uniform
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.202500	kPeak=   200	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    hotspot
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.089167	kPeak=   200	range=  1000	keys=  1000	keyDist= sequential	valueDist=    hotspot
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.015833	kPeak=   200	range=  1000	keys=  1000	keyDist= sequential	valueDist= sequential
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.117500	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist= sequential
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.007500	kPeak=   200	range=  1000	keys=  2000	keyDist=    zipfian	valueDist=    uniform
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.040833	kPeak=   200	range=  1000	keys=  2000	keyDist=    zipfian	valueDist=    zipfian
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.057500	kPeak=   200	range=  1000	keys=  2000	keyDist=    zipfian	valueDist=    hotspot
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.005000	kPeak=   200	range=  1000	keys=  2000	keyDist=    zipfian	valueDist= sequential
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.027500	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    uniform
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.198333	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    hotspot
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.023333	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist= sequential
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.015833	kPeak=   200	range=  1000	keys=  2000	keyDist= sequential	valueDist= sequential
+kAcc=0.050000	vAcc=0.053511	kAccPerRound=0.299167	kPeak=   200	range=   400	keys=   400	keyDist=    zipfian	valueDist=    hotspot
+kAcc=0.050000	vAcc=0.098306	kAccPerRound=0.175833	kPeak=   200	range=   400	keys=   400	keyDist=    zipfian	valueDist= sequential
+kAcc=0.050000	vAcc=0.035461	kAccPerRound=0.160000	kPeak=   200	range=   400	keys=   800	keyDist=    uniform	valueDist=   constant
+kAcc=0.050000	vAcc=0.446173	kAccPerRound=0.096667	kPeak=   200	range=   400	keys=   800	keyDist=    uniform	valueDist=    uniform
+kAcc=0.050000	vAcc=0.301191	kAccPerRound=0.211667	kPeak=   200	range=   400	keys=   800	keyDist=    zipfian	valueDist=    hotspot
+kAcc=0.050000	vAcc=0.074173	kAccPerRound=0.199167	kPeak=   200	range=   400	keys=   800	keyDist=    hotspot	valueDist=    uniform
+kAcc=0.050000	vAcc=0.090219	kAccPerRound=0.227500	kPeak=   200	range=   400	keys=   800	keyDist=    hotspot	valueDist=    zipfian
+kAcc=0.050000	vAcc=0.098683	kAccPerRound=0.289167	kPeak=   200	range=   400	keys=   800	keyDist=    hotspot	valueDist=    hotspot
+kAcc=0.050000	vAcc=0.051910	kAccPerRound=0.202500	kPeak=   200	range=   400	keys=   800	keyDist=    hotspot	valueDist= sequential
+kAcc=0.050000	vAcc=0.333333	kAccPerRound=0.133333	kPeak=   200	range=  1000	keys=   100	keyDist=    uniform	valueDist=   constant
+kAcc=0.050000	vAcc=0.193089	kAccPerRound=0.290000	kPeak=   200	range=  1000	keys=   100	keyDist=    zipfian	valueDist=    zipfian
+kAcc=0.050000	vAcc=0.259330	kAccPerRound=0.184167	kPeak=   200	range=  1000	keys=   100	keyDist=    hotspot	valueDist=    uniform
+kAcc=0.050000	vAcc=0.080000	kAccPerRound=0.209167	kPeak=   200	range=  1000	keys=   500	keyDist=    uniform	valueDist=   constant
+kAcc=0.050000	vAcc=0.110873	kAccPerRound=0.113333	kPeak=   200	range=  1000	keys=   500	keyDist=    uniform	valueDist=    uniform
+kAcc=0.050000	vAcc=0.073015	kAccPerRound=0.140833	kPeak=   200	range=  1000	keys=   500	keyDist=    zipfian	valueDist=    zipfian
+kAcc=0.050000	vAcc=0.059099	kAccPerRound=0.150000	kPeak=   200	range=  1000	keys=   500	keyDist=    hotspot	valueDist= sequential
+kAcc=0.050000	vAcc=0.114717	kAccPerRound=0.108333	kPeak=   200	range=  1000	keys=  1000	keyDist=    zipfian	valueDist=    hotspot
+kAcc=0.050000	vAcc=0.020623	kAccPerRound=0.027500	kPeak=   200	range=  1000	keys=  1000	keyDist=    zipfian	valueDist= sequential
+kAcc=0.050000	vAcc=0.039283	kAccPerRound=0.168333	kPeak=   200	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    zipfian
+kAcc=0.050000	vAcc=0.022652	kAccPerRound=0.072500	kPeak=   200	range=  1000	keys=  1000	keyDist=    hotspot	valueDist= sequential
+kAcc=0.050000	vAcc=0.079818	kAccPerRound=0.103333	kPeak=   200	range=  1000	keys=  1000	keyDist= sequential	valueDist=    uniform
+kAcc=0.050000	vAcc=0.105864	kAccPerRound=0.139167	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.050000	vAcc=0.103579	kAccPerRound=0.157500	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    zipfian
+kAcc=0.100000	vAcc=0.250000	kAccPerRound=0.137500	kPeak=   200	range=   400	keys=    40	keyDist=    uniform	valueDist=   constant
+kAcc=0.100000	vAcc=0.370991	kAccPerRound=0.115833	kPeak=   200	range=   400	keys=   400	keyDist=    uniform	valueDist=    uniform
+kAcc=0.100000	vAcc=0.107766	kAccPerRound=0.214167	kPeak=   200	range=   400	keys=   400	keyDist=    zipfian	valueDist=    uniform
+kAcc=0.100000	vAcc=0.072288	kAccPerRound=0.292500	kPeak=   200	range=   400	keys=   400	keyDist=    zipfian	valueDist=    zipfian
+kAcc=0.100000	vAcc=0.132993	kAccPerRound=0.227500	kPeak=   200	range=   400	keys=   400	keyDist=    hotspot	valueDist=    uniform
+kAcc=0.100000	vAcc=0.162846	kAccPerRound=0.221667	kPeak=   200	range=   400	keys=   400	keyDist=    hotspot	valueDist= sequential
+kAcc=0.100000	vAcc=0.286326	kAccPerRound=0.020000	kPeak=   200	range=   400	keys=   400	keyDist= sequential	valueDist= sequential
+kAcc=0.100000	vAcc=0.406290	kAccPerRound=0.124167	kPeak=   200	range=   400	keys=   800	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.100000	vAcc=0.293327	kAccPerRound=0.095833	kPeak=   200	range=   400	keys=   800	keyDist= sequential	valueDist=    uniform
+kAcc=0.100000	vAcc=0.714730	kAccPerRound=0.336667	kPeak=   200	range=  1000	keys=   100	keyDist=    zipfian	valueDist=    hotspot
+kAcc=0.100000	vAcc=0.326176	kAccPerRound=0.095833	kPeak=   200	range=  1000	keys=   500	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.100000	vAcc=0.336355	kAccPerRound=0.103333	kPeak=   200	range=  1000	keys=   500	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.100000	vAcc=0.234234	kAccPerRound=0.100833	kPeak=   200	range=  1000	keys=   500	keyDist= sequential	valueDist=    hotspot
+kAcc=0.100000	vAcc=0.253251	kAccPerRound=0.089167	kPeak=   200	range=  1000	keys=  1000	keyDist= sequential	valueDist=    zipfian
+kAcc=0.100000	vAcc=0.118644	kAccPerRound=0.031667	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist=   constant
+kAcc=0.100000	vAcc=0.084890	kAccPerRound=0.129167	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    uniform
+kAcc=0.100000	vAcc=0.147698	kAccPerRound=0.099167	kPeak=   200	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.100000	vAcc=0.024823	kAccPerRound=0.305000	kPeak=   200	range=  1000	keys=  2000	keyDist=    zipfian	valueDist=   constant
+kAcc=0.100000	vAcc=0.042157	kAccPerRound=0.123333	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=   constant
+kAcc=0.100000	vAcc=0.192413	kAccPerRound=0.100000	kPeak=   200	range=  1000	keys=  2000	keyDist= sequential	valueDist=    zipfian
+kAcc=0.150000	vAcc=0.779494	kAccPerRound=0.110833	kPeak=   200	range=   400	keys=   200	keyDist=    uniform	valueDist=    uniform
+kAcc=0.150000	vAcc=0.166200	kAccPerRound=0.278333	kPeak=   200	range=   400	keys=   200	keyDist=    zipfian	valueDist= sequential
+kAcc=0.150000	vAcc=0.133324	kAccPerRound=0.290833	kPeak=   200	range=   400	keys=   200	keyDist=    hotspot	valueDist= sequential
+kAcc=0.150000	vAcc=0.351404	kAccPerRound=0.117500	kPeak=   200	range=   400	keys=   800	keyDist=    uniform	valueDist= sequential
+kAcc=0.150000	vAcc=0.036715	kAccPerRound=0.218333	kPeak=   200	range=   400	keys=   800	keyDist=    zipfian	valueDist=    zipfian
+kAcc=0.150000	vAcc=0.581543	kAccPerRound=0.120833	kPeak=   200	range=  1000	keys=   100	keyDist=    uniform	valueDist=    uniform
+kAcc=0.150000	vAcc=0.489040	kAccPerRound=0.112500	kPeak=   200	range=  1000	keys=   100	keyDist=    uniform	valueDist= sequential
+kAcc=0.150000	vAcc=0.191592	kAccPerRound=0.120000	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.150000	vAcc=0.243553	kAccPerRound=0.109167	kPeak=   200	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.150000	vAcc=0.016708	kAccPerRound=0.242500	kPeak=   200	range=  1000	keys=  1000	keyDist=    zipfian	valueDist=   constant
+kAcc=0.150000	vAcc=0.152598	kAccPerRound=0.092500	kPeak=   200	range=  1000	keys=  2000	keyDist= sequential	valueDist=    uniform
+kAcc=0.150000	vAcc=0.093465	kAccPerRound=0.109167	kPeak=   200	range=  1000	keys=  2000	keyDist= sequential	valueDist=    hotspot
+kAcc=0.200000	vAcc=0.054822	kAccPerRound=0.260833	kPeak=   200	range=   400	keys=   200	keyDist=    zipfian	valueDist=    uniform
+kAcc=0.200000	vAcc=0.167351	kAccPerRound=0.340000	kPeak=   200	range=   400	keys=   200	keyDist=    zipfian	valueDist=    hotspot
+kAcc=0.200000	vAcc=0.184035	kAccPerRound=0.300833	kPeak=   200	range=   400	keys=   200	keyDist=    hotspot	valueDist=    uniform
+kAcc=0.200000	vAcc=0.643899	kAccPerRound=0.108333	kPeak=   200	range=   400	keys=   200	keyDist= sequential	valueDist=    uniform
+kAcc=0.200000	vAcc=0.426454	kAccPerRound=0.115833	kPeak=   200	range=   400	keys=   800	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.200000	vAcc=0.556442	kAccPerRound=0.106667	kPeak=   200	range=   400	keys=   800	keyDist= sequential	valueDist=    zipfian
+kAcc=0.200000	vAcc=0.065336	kAccPerRound=0.206667	kPeak=   200	range=  1000	keys=   500	keyDist=    hotspot	valueDist=   constant
+kAcc=0.200000	vAcc=0.360522	kAccPerRound=0.105000	kPeak=   200	range=  1000	keys=   500	keyDist= sequential	valueDist=    zipfian
+kAcc=0.250000	vAcc=0.707407	kAccPerRound=0.291667	kPeak=   200	range=   400	keys=    40	keyDist=    zipfian	valueDist=   constant
+kAcc=0.250000	vAcc=0.282927	kAccPerRound=0.093333	kPeak=   200	range=   400	keys=   200	keyDist=    uniform	valueDist=   constant
+kAcc=0.250000	vAcc=0.708362	kAccPerRound=0.115000	kPeak=   200	range=   400	keys=   200	keyDist=    uniform	valueDist= sequential
+kAcc=0.250000	vAcc=0.272588	kAccPerRound=0.315833	kPeak=   200	range=   400	keys=   200	keyDist=    zipfian	valueDist=    zipfian
+kAcc=0.250000	vAcc=0.311723	kAccPerRound=0.111667	kPeak=   200	range=   400	keys=   400	keyDist=    uniform	valueDist= sequential
+kAcc=0.250000	vAcc=0.018619	kAccPerRound=0.098333	kPeak=   200	range=   400	keys=   400	keyDist=    hotspot	valueDist=   constant
+kAcc=0.250000	vAcc=0.575489	kAccPerRound=0.110000	kPeak=   200	range=   400	keys=   400	keyDist= sequential	valueDist=    zipfian
+kAcc=0.250000	vAcc=0.847561	kAccPerRound=0.147500	kPeak=   200	range=  1000	keys=   100	keyDist=    hotspot	valueDist=   constant
+kAcc=0.250000	vAcc=0.038835	kAccPerRound=0.136667	kPeak=   200	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=   constant
+kAcc=0.300000	vAcc=0.812375	kAccPerRound=0.170000	kPeak=   200	range=   400	keys=    40	keyDist=    uniform	valueDist=    uniform
+kAcc=0.300000	vAcc=0.019538	kAccPerRound=0.336667	kPeak=   200	range=   400	keys=   200	keyDist=    zipfian	valueDist=   constant
+kAcc=0.300000	vAcc=0.722767	kAccPerRound=0.132500	kPeak=   200	range=   400	keys=   400	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.300000	vAcc=0.184952	kAccPerRound=0.295000	kPeak=   200	range=   400	keys=   400	keyDist=    hotspot	valueDist=    zipfian
+kAcc=0.300000	vAcc=0.652711	kAccPerRound=0.101667	kPeak=   200	range=   400	keys=   800	keyDist= sequential	valueDist=    hotspot
+kAcc=0.300000	vAcc=0.894235	kAccPerRound=0.109167	kPeak=   200	range=  1000	keys=   100	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.300000	vAcc=0.414943	kAccPerRound=0.183333	kPeak=   200	range=  1000	keys=   100	keyDist=    hotspot	valueDist=    zipfian
+kAcc=0.350000	vAcc=0.925866	kAccPerRound=0.598333	kPeak=   200	range=   201	keys=   201	keyDist=    zipfian	valueDist=   constant
+kAcc=0.350000	vAcc=0.975778	kAccPerRound=0.165833	kPeak=   200	range=   400	keys=    40	keyDist=    uniform	valueDist= sequential
+kAcc=0.350000	vAcc=0.324131	kAccPerRound=0.336667	kPeak=   200	range=   400	keys=   200	keyDist=    hotspot	valueDist=   constant
+kAcc=0.350000	vAcc=0.906310	kAccPerRound=0.105000	kPeak=   200	range=   400	keys=   400	keyDist=    uniform	valueDist=   constant
+kAcc=0.350000	vAcc=0.727556	kAccPerRound=0.125833	kPeak=   200	range=   400	keys=   400	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.350000	vAcc=0.128094	kAccPerRound=0.360000	kPeak=   200	range=   400	keys=   400	keyDist=    zipfian	valueDist=   constant
+kAcc=0.350000	vAcc=0.266307	kAccPerRound=0.300833	kPeak=   200	range=   400	keys=   400	keyDist=    hotspot	valueDist=    hotspot
+kAcc=0.350000	vAcc=0.306768	kAccPerRound=0.099167	kPeak=   200	range=   400	keys=   400	keyDist= sequential	valueDist=    uniform
+kAcc=0.350000	vAcc=0.062081	kAccPerRound=0.259167	kPeak=   200	range=   400	keys=   800	keyDist=    hotspot	valueDist=   constant
+kAcc=0.350000	vAcc=0.851036	kAccPerRound=0.110833	kPeak=   200	range=  1000	keys=   100	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.350000	vAcc=0.529412	kAccPerRound=0.184167	kPeak=   200	range=  1000	keys=   100	keyDist=    hotspot	valueDist=    hotspot
+kAcc=0.350000	vAcc=0.143780	kAccPerRound=0.375833	kPeak=   200	range=  1000	keys=   500	keyDist=    zipfian	valueDist=   constant
+kAcc=0.400000	vAcc=1.000000	kAccPerRound=0.218333	kPeak=   200	range=   201	keys=   402	keyDist=    uniform	valueDist=   constant
+kAcc=0.400000	vAcc=0.925361	kAccPerRound=0.439167	kPeak=   200	range=   400	keys=    40	keyDist=    zipfian	valueDist=    uniform
+kAcc=0.400000	vAcc=0.858802	kAccPerRound=0.139167	kPeak=   200	range=   400	keys=   200	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.400000	vAcc=0.335165	kAccPerRound=0.296667	kPeak=   200	range=   400	keys=   200	keyDist=    hotspot	valueDist=    zipfian
+kAcc=0.400000	vAcc=0.080431	kAccPerRound=0.362500	kPeak=   200	range=  1000	keys=   100	keyDist=    zipfian	valueDist=   constant
+kAcc=0.450000	vAcc=0.468684	kAccPerRound=0.302500	kPeak=   200	range=   400	keys=   200	keyDist=    hotspot	valueDist=    hotspot
+kAcc=0.450000	vAcc=0.849865	kAccPerRound=0.137500	kPeak=   200	range=   400	keys=   200	keyDist= sequential	valueDist=    hotspot
+kAcc=0.500000	vAcc=0.654622	kAccPerRound=0.426667	kPeak=   200	range=   400	keys=    40	keyDist=    zipfian	valueDist= sequential
+kAcc=0.500000	vAcc=0.398026	kAccPerRound=0.253333	kPeak=   200	range=   400	keys=    40	keyDist=    hotspot	valueDist=   constant
+kAcc=0.500000	vAcc=0.987692	kAccPerRound=0.295833	kPeak=   200	range=   400	keys=    40	keyDist=    hotspot	valueDist=    uniform
+kAcc=0.500000	vAcc=0.869971	kAccPerRound=0.142500	kPeak=   200	range=   400	keys=   200	keyDist= sequential	valueDist=    zipfian
+kAcc=0.500000	vAcc=0.673314	kAccPerRound=0.111667	kPeak=   200	range=   400	keys=   400	keyDist= sequential	valueDist=    hotspot
+kAcc=0.550000	vAcc=0.839064	kAccPerRound=0.135833	kPeak=   200	range=   400	keys=   200	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.600000	vAcc=0.704525	kAccPerRound=0.117500	kPeak=   200	range=  1000	keys=   100	keyDist= sequential	valueDist=    uniform
+kAcc=0.650000	vAcc=0.882748	kAccPerRound=0.111667	kPeak=   200	range=  1000	keys=   100	keyDist= sequential	valueDist=    zipfian
+kAcc=0.700000	vAcc=0.978788	kAccPerRound=0.156667	kPeak=   200	range=   400	keys=    40	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.700000	vAcc=0.996077	kAccPerRound=0.178333	kPeak=   200	range=   400	keys=    40	keyDist= sequential	valueDist=    uniform
+kAcc=0.700000	vAcc=0.081826	kAccPerRound=0.559167	kPeak=   200	range=   400	keys=   800	keyDist=    zipfian	valueDist=   constant
+kAcc=0.700000	vAcc=0.922736	kAccPerRound=0.120833	kPeak=   200	range=  1000	keys=   100	keyDist= sequential	valueDist=    hotspot
+kAcc=0.750000	vAcc=1.000000	kAccPerRound=0.101667	kPeak=   200	range=   201	keys=   402	keyDist= sequential	valueDist= sequential
+kAcc=0.800000	vAcc=1.000000	kAccPerRound=0.245812	kPeak=   200	range=   200	keys=    20	keyDist=    uniform	valueDist=   constant
+kAcc=0.850000	vAcc=1.000000	kAccPerRound=0.314066	kPeak=   149	range=   150	keys=    15	keyDist=    uniform	valueDist=   constant
+kAcc=0.850000	vAcc=1.000000	kAccPerRound=0.240333	kPeak=   200	range=   201	keys=    20	keyDist=    uniform	valueDist=   constant
+kAcc=0.850000	vAcc=1.000000	kAccPerRound=0.305833	kPeak=   200	range=   400	keys=    40	keyDist=    hotspot	valueDist= sequential
+kAcc=0.850000	vAcc=0.978872	kAccPerRound=0.134167	kPeak=   200	range=   400	keys=    40	keyDist= sequential	valueDist=    hotspot
+kAcc=0.900000	vAcc=1.000000	kAccPerRound=0.197500	kPeak=   200	range=   200	keys=   100	keyDist=    uniform	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.264716	kPeak=   150	range=   150	keys=    15	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.220000	kPeak=   150	range=   150	keys=    75	keyDist=    uniform	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.233333	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.470733	kPeak=   164	range=   200	keys=    20	keyDist=    hotspot	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.167500	kPeak=   200	range=   200	keys=    20	keyDist= sequential	valueDist=    hotspot
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.265000	kPeak=   200	range=   200	keys=    20	keyDist= sequential	valueDist= sequential
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.472903	kPeak=   170	range=   201	keys=    20	keyDist=    hotspot	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.204167	kPeak=   200	range=   201	keys=   100	keyDist=    uniform	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.193333	kPeak=   200	range=   201	keys=   201	keyDist=    uniform	valueDist=   constant
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.234167	kPeak=   200	range=   201	keys=   201	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.188333	kPeak=   200	range=   201	keys=   201	keyDist= sequential	valueDist=    uniform
+kAcc=0.950000	vAcc=0.999744	kAccPerRound=0.100833	kPeak=   200	range=   201	keys=   201	keyDist= sequential	valueDist= sequential
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.208333	kPeak=   200	range=   201	keys=   402	keyDist=    uniform	valueDist=    uniform
+kAcc=0.950000	vAcc=0.982388	kAccPerRound=0.153333	kPeak=   200	range=   400	keys=    40	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.950000	vAcc=1.000000	kAccPerRound=0.438333	kPeak=   200	range=   400	keys=    40	keyDist=    zipfian	valueDist=    hotspot
+kAcc=0.950000	vAcc=0.996810	kAccPerRound=0.140000	kPeak=   200	range=   400	keys=    40	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.298669	kPeak=   150	range=   150	keys=    15	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.250333	kPeak=   150	range=   150	keys=    15	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.326532	kPeak=   150	range=   150	keys=    15	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.267778	kPeak=   150	range=   150	keys=    15	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.204444	kPeak=   150	range=   150	keys=    15	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.208889	kPeak=   150	range=   150	keys=    15	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.346667	kPeak=   150	range=   150	keys=    15	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.255833	kPeak=   150	range=   150	keys=    75	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.271667	kPeak=   150	range=   150	keys=    75	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.256667	kPeak=   150	range=   150	keys=    75	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.243333	kPeak=   150	range=   150	keys=    75	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.499167	kPeak=   150	range=   150	keys=    75	keyDist=    zipfian	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.270000	kPeak=   150	range=   150	keys=    75	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.265000	kPeak=   150	range=   150	keys=    75	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.250000	kPeak=   150	range=   150	keys=    75	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.253333	kPeak=   150	range=   150	keys=    75	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.245000	kPeak=   150	range=   150	keys=   150	keyDist=    uniform	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.241667	kPeak=   150	range=   150	keys=   150	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.260833	kPeak=   150	range=   150	keys=   150	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.254167	kPeak=   150	range=   150	keys=   150	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.252500	kPeak=   150	range=   150	keys=   150	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.215833	kPeak=   150	range=   150	keys=   150	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.267500	kPeak=   150	range=   150	keys=   150	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.274167	kPeak=   150	range=   150	keys=   150	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.185833	kPeak=   150	range=   150	keys=   150	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.240000	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.253333	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.240833	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.242500	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.225000	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.242500	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.262500	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.084167	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.245322	kPeak=   199	range=   200	keys=    20	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.183091	kPeak=   200	range=   200	keys=    20	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.203801	kPeak=   200	range=   200	keys=    20	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.279412	kPeak=   200	range=   200	keys=    20	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.488768	kPeak=   167	range=   200	keys=    20	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.434036	kPeak=   173	range=   200	keys=    20	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.457063	kPeak=   170	range=   200	keys=    20	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.483016	kPeak=   175	range=   200	keys=    20	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.224167	kPeak=   200	range=   200	keys=    20	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.163333	kPeak=   200	range=   200	keys=    20	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.225000	kPeak=   200	range=   200	keys=   100	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.228333	kPeak=   200	range=   200	keys=   100	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.219167	kPeak=   200	range=   200	keys=   100	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.213333	kPeak=   200	range=   200	keys=   100	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.483333	kPeak=   200	range=   200	keys=   100	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.479167	kPeak=   200	range=   200	keys=   100	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.230833	kPeak=   200	range=   200	keys=   100	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.226667	kPeak=   200	range=   200	keys=   100	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.240000	kPeak=   200	range=   200	keys=   100	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.170833	kPeak=   200	range=   200	keys=   100	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.215000	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.214167	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.227500	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.223333	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.213333	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.173333	kPeak=   200	range=   200	keys=   200	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.235833	kPeak=   200	range=   200	keys=   200	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.225000	kPeak=   200	range=   200	keys=   200	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.093333	kPeak=   200	range=   200	keys=   200	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.198333	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist=   constant
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.213333	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.214167	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.205000	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.207500	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.182500	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.207500	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.200000	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.091667	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.229400	kPeak=   200	range=   201	keys=    20	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.204545	kPeak=   200	range=   201	keys=    20	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.194605	kPeak=   200	range=   201	keys=    20	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.255569	kPeak=   200	range=   201	keys=    20	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.482446	kPeak=   167	range=   201	keys=    20	keyDist=    hotspot	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.442297	kPeak=   163	range=   201	keys=    20	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.451472	kPeak=   169	range=   201	keys=    20	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.496831	kPeak=   163	range=   201	keys=    20	keyDist=    hotspot	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.213333	kPeak=   200	range=   201	keys=    20	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.161667	kPeak=   200	range=   201	keys=    20	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.166667	kPeak=   200	range=   201	keys=    20	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.270000	kPeak=   200	range=   201	keys=    20	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.226667	kPeak=   200	range=   201	keys=   100	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.220833	kPeak=   200	range=   201	keys=   100	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.226667	kPeak=   200	range=   201	keys=   100	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.217500	kPeak=   200	range=   201	keys=   100	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.470000	kPeak=   200	range=   201	keys=   100	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.469167	kPeak=   200	range=   201	keys=   100	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.238333	kPeak=   200	range=   201	keys=   100	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.225833	kPeak=   200	range=   201	keys=   100	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.236667	kPeak=   200	range=   201	keys=   100	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=0.999856	kAccPerRound=0.337500	kPeak=   200	range=   201	keys=   100	keyDist= sequential	valueDist= sequential
+kAcc=1.000000	vAcc=0.999568	kAccPerRound=0.197500	kPeak=   200	range=   201	keys=   201	keyDist=    uniform	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.228333	kPeak=   200	range=   201	keys=   201	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.215000	kPeak=   200	range=   201	keys=   201	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.223333	kPeak=   200	range=   201	keys=   201	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.226667	kPeak=   200	range=   201	keys=   201	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.223333	kPeak=   200	range=   201	keys=   402	keyDist=    uniform	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.200000	kPeak=   200	range=   201	keys=   402	keyDist=    uniform	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.206667	kPeak=   200	range=   201	keys=   402	keyDist=    uniform	valueDist= sequential
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.180000	kPeak=   200	range=   201	keys=   402	keyDist= sequential	valueDist=    uniform
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.195833	kPeak=   200	range=   201	keys=   402	keyDist= sequential	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.213333	kPeak=   200	range=   201	keys=   402	keyDist= sequential	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.434167	kPeak=   200	range=   400	keys=    40	keyDist=    zipfian	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.296667	kPeak=   200	range=   400	keys=    40	keyDist=    hotspot	valueDist=    zipfian
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.302500	kPeak=   200	range=   400	keys=    40	keyDist=    hotspot	valueDist=    hotspot
+kAcc=1.000000	vAcc=1.000000	kAccPerRound=0.219167	kPeak=   200	range=   400	keys=    40	keyDist= sequential	valueDist= sequential
 
 =================================
 Store v3(top20):
-Avg key efficiency: 0.793333, Avg value efficiency: 0.774041, Avg peak keys: 184.781250, Max peak keys: 733
+Avg key accuracy: 0.791979, Avg value accuracy: 0.774019, Avg key accuracy per round: 0.979012, Avg peak keys: 183.870833, Max peak keys: 744
 Bad cases:
-kEff=0.000000	vEff=0.000000	kPeak=   351	range=   400	keys=   400	keyDist=    hotspot	valueDist=   constant
-kEff=0.000000	vEff=0.000000	kPeak=   641	range=  1000	keys=  2000	keyDist= sequential	valueDist= sequential
-kEff=0.050000	vEff=0.199798	kPeak=   714	range=  1000	keys=   500	keyDist= sequential	valueDist=    uniform
-kEff=0.100000	vEff=0.305668	kPeak=   711	range=  1000	keys=  1000	keyDist= sequential	valueDist=    hotspot
-kEff=0.100000	vEff=0.094286	kPeak=   695	range=  1000	keys=  1000	keyDist= sequential	valueDist= sequential
-kEff=0.100000	vEff=0.235951	kPeak=   702	range=  1000	keys=  2000	keyDist= sequential	valueDist=    zipfian
-kEff=0.150000	vEff=0.369880	kPeak=   384	range=   400	keys=   200	keyDist= sequential	valueDist=    uniform
-kEff=0.150000	vEff=0.202278	kPeak=   383	range=   400	keys=   400	keyDist= sequential	valueDist=    uniform
-kEff=0.150000	vEff=0.123222	kPeak=   400	range=   400	keys=   800	keyDist= sequential	valueDist= sequential
-kEff=0.150000	vEff=0.248980	kPeak=   695	range=  1000	keys=  1000	keyDist=    uniform	valueDist=   constant
-kEff=0.150000	vEff=0.132515	kPeak=   708	range=  1000	keys=  1000	keyDist= sequential	valueDist=    uniform
-kEff=0.150000	vEff=0.129455	kPeak=   698	range=  1000	keys=  2000	keyDist= sequential	valueDist=    uniform
-kEff=0.150000	vEff=0.203089	kPeak=   695	range=  1000	keys=  2000	keyDist= sequential	valueDist=    hotspot
-kEff=0.200000	vEff=0.447384	kPeak=   155	range=   200	keys=   100	keyDist= sequential	valueDist= sequential
-kEff=0.200000	vEff=0.302582	kPeak=   200	range=   200	keys=   200	keyDist= sequential	valueDist= sequential
-kEff=0.200000	vEff=0.244453	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist= sequential
-kEff=0.200000	vEff=0.234497	kPeak=   137	range=   201	keys=   201	keyDist= sequential	valueDist= sequential
-kEff=0.200000	vEff=0.466667	kPeak=   699	range=  1000	keys=   100	keyDist= sequential	valueDist= sequential
-kEff=0.200000	vEff=0.293194	kPeak=   701	range=  1000	keys=   500	keyDist=    uniform	valueDist=   constant
-kEff=0.200000	vEff=0.436215	kPeak=   725	range=  1000	keys=   500	keyDist= sequential	valueDist=    zipfian
-kEff=0.200000	vEff=0.228040	kPeak=   703	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    uniform
-kEff=0.250000	vEff=0.301657	kPeak=   201	range=   201	keys=   201	keyDist= sequential	valueDist=    uniform
-kEff=0.250000	vEff=0.290278	kPeak=   379	range=   400	keys=   800	keyDist=    uniform	valueDist=   constant
-kEff=0.250000	vEff=0.182968	kPeak=   382	range=   400	keys=   800	keyDist= sequential	valueDist=    uniform
-kEff=0.250000	vEff=0.364516	kPeak=   707	range=  1000	keys=   500	keyDist=    uniform	valueDist= sequential
-kEff=0.250000	vEff=0.183537	kPeak=   598	range=  1000	keys=   500	keyDist= sequential	valueDist= sequential
-kEff=0.250000	vEff=0.285188	kPeak=   700	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    uniform
-kEff=0.250000	vEff=0.418846	kPeak=   718	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    hotspot
-kEff=0.300000	vEff=0.291112	kPeak=   201	range=   201	keys=   402	keyDist= sequential	valueDist= sequential
-kEff=0.300000	vEff=0.331395	kPeak=   400	range=   400	keys=   200	keyDist= sequential	valueDist= sequential
-kEff=0.300000	vEff=0.293849	kPeak=   382	range=   400	keys=   800	keyDist=    uniform	valueDist=    uniform
-kEff=0.300000	vEff=0.363330	kPeak=   703	range=  1000	keys=   500	keyDist=    uniform	valueDist=    uniform
-kEff=0.300000	vEff=0.485338	kPeak=   703	range=  1000	keys=   500	keyDist=    uniform	valueDist=    zipfian
-kEff=0.300000	vEff=0.535824	kPeak=   703	range=  1000	keys=   500	keyDist= sequential	valueDist=    hotspot
-kEff=0.300000	vEff=0.300642	kPeak=   685	range=  1000	keys=  1000	keyDist=    uniform	valueDist= sequential
-kEff=0.300000	vEff=0.293702	kPeak=   709	range=  1000	keys=  1000	keyDist= sequential	valueDist=    zipfian
-kEff=0.300000	vEff=0.167035	kPeak=   700	range=  1000	keys=  2000	keyDist=    uniform	valueDist=   constant
-kEff=0.300000	vEff=0.310325	kPeak=   718	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    zipfian
-kEff=0.300000	vEff=0.212935	kPeak=   693	range=  1000	keys=  2000	keyDist=    uniform	valueDist= sequential
-kEff=0.350000	vEff=0.392471	kPeak=   150	range=   150	keys=   150	keyDist= sequential	valueDist= sequential
-kEff=0.350000	vEff=0.225180	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist= sequential
-kEff=0.350000	vEff=0.414622	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist=    uniform
-kEff=0.350000	vEff=0.280271	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist=    uniform
-kEff=0.350000	vEff=0.740806	kPeak=    98	range=   201	keys=   100	keyDist= sequential	valueDist= sequential
-kEff=0.350000	vEff=0.273638	kPeak=   201	range=   201	keys=   402	keyDist= sequential	valueDist=    uniform
-kEff=0.350000	vEff=0.464407	kPeak=   385	range=   400	keys=   200	keyDist=    uniform	valueDist=   constant
-kEff=0.350000	vEff=0.138924	kPeak=   400	range=   400	keys=   400	keyDist= sequential	valueDist= sequential
-kEff=0.350000	vEff=0.407933	kPeak=   381	range=   400	keys=   800	keyDist=    uniform	valueDist=    zipfian
-kEff=0.350000	vEff=0.369613	kPeak=   377	range=   400	keys=   800	keyDist=    uniform	valueDist=    hotspot
-kEff=0.350000	vEff=0.305003	kPeak=   383	range=   400	keys=   800	keyDist= sequential	valueDist=    hotspot
-kEff=0.350000	vEff=0.291951	kPeak=   199	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    uniform
-kEff=0.350000	vEff=0.320031	kPeak=   199	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    hotspot
-kEff=0.350000	vEff=0.281124	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist= sequential
-kEff=0.400000	vEff=0.591623	kPeak=   150	range=   150	keys=    75	keyDist= sequential	valueDist=    uniform
-kEff=0.400000	vEff=0.376506	kPeak=   201	range=   201	keys=   402	keyDist=    uniform	valueDist=    uniform
-kEff=0.400000	vEff=0.482516	kPeak=   379	range=   400	keys=   200	keyDist=    uniform	valueDist= sequential
-kEff=0.400000	vEff=0.353719	kPeak=   382	range=   400	keys=   400	keyDist=    uniform	valueDist=   constant
-kEff=0.400000	vEff=0.498799	kPeak=   390	range=   400	keys=   400	keyDist=    uniform	valueDist=    hotspot
-kEff=0.400000	vEff=0.374276	kPeak=   384	range=   400	keys=   400	keyDist=    uniform	valueDist= sequential
-kEff=0.400000	vEff=0.435010	kPeak=   375	range=   400	keys=   400	keyDist= sequential	valueDist=    zipfian
-kEff=0.400000	vEff=0.350625	kPeak=   381	range=   400	keys=   800	keyDist= sequential	valueDist=    zipfian
-kEff=0.400000	vEff=0.725519	kPeak=   714	range=  1000	keys=   100	keyDist=    uniform	valueDist=    uniform
-kEff=0.400000	vEff=0.329235	kPeak=   199	range=  1000	keys=  1000	keyDist=    hotspot	valueDist= sequential
-kEff=0.400000	vEff=0.277056	kPeak=   706	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    hotspot
-kEff=0.450000	vEff=0.705110	kPeak=   150	range=   150	keys=    75	keyDist= sequential	valueDist= sequential
-kEff=0.450000	vEff=0.350837	kPeak=   150	range=   150	keys=   150	keyDist= sequential	valueDist=    uniform
-kEff=0.450000	vEff=0.290745	kPeak=   200	range=   200	keys=   200	keyDist= sequential	valueDist=    uniform
-kEff=0.450000	vEff=0.368885	kPeak=   198	range=   200	keys=   400	keyDist=    uniform	valueDist=   constant
-kEff=0.450000	vEff=0.424439	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist=    zipfian
-kEff=0.450000	vEff=0.502934	kPeak=   199	range=   201	keys=   201	keyDist=    uniform	valueDist= sequential
-kEff=0.450000	vEff=0.405721	kPeak=   201	range=   201	keys=   402	keyDist=    uniform	valueDist= sequential
-kEff=0.450000	vEff=0.449621	kPeak=   201	range=   201	keys=   402	keyDist= sequential	valueDist=    zipfian
-kEff=0.450000	vEff=1.000000	kPeak=   279	range=   400	keys=    40	keyDist= sequential	valueDist= sequential
-kEff=0.450000	vEff=0.472608	kPeak=   381	range=   400	keys=   200	keyDist=    uniform	valueDist=    uniform
-kEff=0.450000	vEff=0.606472	kPeak=   382	range=   400	keys=   200	keyDist= sequential	valueDist=    hotspot
-kEff=0.450000	vEff=0.375035	kPeak=   378	range=   400	keys=   400	keyDist=    uniform	valueDist=    uniform
-kEff=0.450000	vEff=0.413645	kPeak=   384	range=   400	keys=   400	keyDist= sequential	valueDist=    hotspot
-kEff=0.450000	vEff=0.296609	kPeak=   382	range=   400	keys=   800	keyDist=    uniform	valueDist= sequential
-kEff=0.450000	vEff=0.475806	kPeak=   710	range=  1000	keys=   100	keyDist=    uniform	valueDist=   constant
-kEff=0.450000	vEff=0.665877	kPeak=   714	range=  1000	keys=   100	keyDist=    uniform	valueDist= sequential
-kEff=0.450000	vEff=0.756776	kPeak=   733	range=  1000	keys=   100	keyDist= sequential	valueDist=    uniform
-kEff=0.450000	vEff=0.498698	kPeak=   703	range=  1000	keys=   500	keyDist=    uniform	valueDist=    hotspot
-kEff=0.450000	vEff=0.393844	kPeak=   201	range=  1000	keys=   500	keyDist=    hotspot	valueDist=    uniform
-kEff=0.500000	vEff=0.336543	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist=    uniform
-kEff=0.500000	vEff=0.422667	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist=   constant
-kEff=0.500000	vEff=0.498771	kPeak=   200	range=   201	keys=   100	keyDist= sequential	valueDist=    uniform
-kEff=0.500000	vEff=0.431034	kPeak=   201	range=   201	keys=   201	keyDist=    uniform	valueDist=   constant
-kEff=0.500000	vEff=0.498706	kPeak=   201	range=   201	keys=   201	keyDist=    uniform	valueDist=    uniform
-kEff=0.500000	vEff=0.334055	kPeak=   201	range=   201	keys=   402	keyDist=    uniform	valueDist=   constant
-kEff=0.500000	vEff=0.371439	kPeak=   200	range=  1000	keys=   500	keyDist=    hotspot	valueDist= sequential
-kEff=0.500000	vEff=0.285769	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=   constant
-kEff=0.500000	vEff=0.358317	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    zipfian
-kEff=0.550000	vEff=0.404339	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist=   constant
-kEff=0.550000	vEff=0.472583	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist= sequential
-kEff=0.550000	vEff=0.447923	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist=    hotspot
-kEff=0.550000	vEff=0.484526	kPeak=   377	range=   400	keys=   400	keyDist=    uniform	valueDist=    zipfian
-kEff=0.550000	vEff=0.456791	kPeak=    80	range=   400	keys=   800	keyDist=    hotspot	valueDist= sequential
-kEff=0.550000	vEff=0.334416	kPeak=   201	range=  1000	keys=   500	keyDist=    hotspot	valueDist=   constant
-kEff=0.550000	vEff=0.480051	kPeak=   256	range=  1000	keys=   500	keyDist=    hotspot	valueDist=    zipfian
-kEff=0.550000	vEff=0.443359	kPeak=   713	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    zipfian
-kEff=0.550000	vEff=0.318152	kPeak=   199	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=   constant
-kEff=0.600000	vEff=0.483835	kPeak=   150	range=   150	keys=   150	keyDist=    uniform	valueDist=   constant
-kEff=0.600000	vEff=0.420376	kPeak=   199	range=   200	keys=   400	keyDist=    uniform	valueDist= sequential
-kEff=0.600000	vEff=0.497032	kPeak=   201	range=   201	keys=   402	keyDist=    uniform	valueDist=    zipfian
-kEff=0.600000	vEff=0.486919	kPeak=   201	range=   201	keys=   402	keyDist=    uniform	valueDist=    hotspot
-kEff=0.600000	vEff=0.458751	kPeak=   230	range=  1000	keys=   500	keyDist=    hotspot	valueDist=    hotspot
-kEff=0.600000	vEff=0.340838	kPeak=   200	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    uniform
-kEff=0.600000	vEff=0.394172	kPeak=   203	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    hotspot
-kEff=0.650000	vEff=0.462416	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist=    uniform
-kEff=0.650000	vEff=0.483024	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist=    hotspot
-kEff=0.650000	vEff=0.497570	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist= sequential
-kEff=0.650000	vEff=0.410307	kPeak=   201	range=   201	keys=   402	keyDist= sequential	valueDist=    hotspot
-kEff=0.700000	vEff=0.481252	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist=    hotspot
-kEff=0.700000	vEff=0.409335	kPeak=   206	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    zipfian
-kEff=0.750000	vEff=0.466284	kPeak=    80	range=   400	keys=   800	keyDist=    hotspot	valueDist=    uniform
-kEff=0.800000	vEff=0.478572	kPeak=    80	range=   400	keys=   800	keyDist=    hotspot	valueDist=   constant
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.974167	kPeak=   693	range=  1000	keys=  1000	keyDist= sequential	valueDist=    hotspot
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.986667	kPeak=   641	range=  1000	keys=  2000	keyDist= sequential	valueDist= sequential
+kAcc=0.050000	vAcc=0.464789	kAccPerRound=1.000000	kPeak=   155	range=   200	keys=   100	keyDist= sequential	valueDist= sequential
+kAcc=0.050000	vAcc=0.134725	kAccPerRound=0.895833	kPeak=   705	range=  1000	keys=  1000	keyDist= sequential	valueDist=    uniform
+kAcc=0.050000	vAcc=0.166817	kAccPerRound=0.980000	kPeak=   696	range=  1000	keys=  2000	keyDist= sequential	valueDist=    uniform
+kAcc=0.100000	vAcc=0.238350	kAccPerRound=0.957500	kPeak=   700	range=  1000	keys=   500	keyDist= sequential	valueDist=    uniform
+kAcc=0.100000	vAcc=0.094286	kAccPerRound=0.991667	kPeak=   695	range=  1000	keys=  1000	keyDist= sequential	valueDist= sequential
+kAcc=0.100000	vAcc=0.267271	kAccPerRound=0.999167	kPeak=   708	range=  1000	keys=  2000	keyDist=    uniform	valueDist= sequential
+kAcc=0.150000	vAcc=0.369834	kAccPerRound=0.975000	kPeak=   387	range=   400	keys=   200	keyDist= sequential	valueDist=    uniform
+kAcc=0.150000	vAcc=0.315385	kAccPerRound=0.710000	kPeak=   704	range=  1000	keys=   500	keyDist=    uniform	valueDist=   constant
+kAcc=0.150000	vAcc=0.288379	kAccPerRound=0.995833	kPeak=   714	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    uniform
+kAcc=0.150000	vAcc=0.196833	kAccPerRound=0.815000	kPeak=   702	range=  1000	keys=  2000	keyDist=    uniform	valueDist=   constant
+kAcc=0.150000	vAcc=0.239889	kAccPerRound=0.997500	kPeak=   697	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    uniform
+kAcc=0.150000	vAcc=0.246219	kAccPerRound=0.995833	kPeak=   710	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.200000	vAcc=0.302582	kAccPerRound=1.000000	kPeak=   200	range=   200	keys=   200	keyDist= sequential	valueDist= sequential
+kAcc=0.200000	vAcc=0.244453	kAccPerRound=1.000000	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist= sequential
+kAcc=0.200000	vAcc=0.235075	kAccPerRound=0.995833	kPeak=   137	range=   201	keys=   201	keyDist= sequential	valueDist= sequential
+kAcc=0.200000	vAcc=0.189960	kAccPerRound=0.963333	kPeak=   381	range=   400	keys=   400	keyDist= sequential	valueDist=    uniform
+kAcc=0.200000	vAcc=0.570542	kAccPerRound=0.998333	kPeak=   697	range=  1000	keys=   100	keyDist=    uniform	valueDist= sequential
+kAcc=0.200000	vAcc=0.261538	kAccPerRound=0.972500	kPeak=   706	range=  1000	keys=  1000	keyDist= sequential	valueDist=    zipfian
+kAcc=0.200000	vAcc=0.257397	kAccPerRound=0.990833	kPeak=   687	range=  1000	keys=  2000	keyDist= sequential	valueDist=    zipfian
+kAcc=0.250000	vAcc=0.248776	kAccPerRound=0.993333	kPeak=   199	range=   200	keys=   400	keyDist= sequential	valueDist=    uniform
+kAcc=0.250000	vAcc=0.312946	kAccPerRound=0.977500	kPeak=   201	range=   201	keys=   201	keyDist= sequential	valueDist=    uniform
+kAcc=0.250000	vAcc=0.315306	kAccPerRound=0.999167	kPeak=   383	range=   400	keys=   800	keyDist=    uniform	valueDist= sequential
+kAcc=0.250000	vAcc=0.330565	kAccPerRound=0.987500	kPeak=   381	range=   400	keys=   800	keyDist= sequential	valueDist=    zipfian
+kAcc=0.250000	vAcc=0.492308	kAccPerRound=0.349167	kPeak=   700	range=  1000	keys=   100	keyDist=    uniform	valueDist=   constant
+kAcc=0.250000	vAcc=0.467607	kAccPerRound=0.985000	kPeak=   682	range=  1000	keys=   500	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.250000	vAcc=0.376612	kAccPerRound=0.990833	kPeak=   684	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.250000	vAcc=0.258840	kAccPerRound=1.000000	kPeak=   717	range=  1000	keys=  1000	keyDist=    uniform	valueDist= sequential
+kAcc=0.250000	vAcc=0.246053	kAccPerRound=0.991667	kPeak=   685	range=  1000	keys=  2000	keyDist= sequential	valueDist=    hotspot
+kAcc=0.300000	vAcc=0.439108	kAccPerRound=0.998333	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist=    uniform
+kAcc=0.300000	vAcc=0.415491	kAccPerRound=0.996667	kPeak=   201	range=   201	keys=   402	keyDist=    uniform	valueDist=    uniform
+kAcc=0.300000	vAcc=0.291112	kAccPerRound=0.995833	kPeak=   201	range=   201	keys=   402	keyDist= sequential	valueDist= sequential
+kAcc=0.300000	vAcc=0.331395	kAccPerRound=0.999167	kPeak=   400	range=   400	keys=   200	keyDist= sequential	valueDist= sequential
+kAcc=0.300000	vAcc=0.123057	kAccPerRound=0.997500	kPeak=   400	range=   400	keys=   800	keyDist= sequential	valueDist= sequential
+kAcc=0.300000	vAcc=0.451852	kAccPerRound=1.000000	kPeak=   699	range=  1000	keys=   100	keyDist= sequential	valueDist= sequential
+kAcc=0.300000	vAcc=0.509312	kAccPerRound=0.990000	kPeak=   706	range=  1000	keys=   500	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.300000	vAcc=0.183503	kAccPerRound=0.995833	kPeak=   598	range=  1000	keys=   500	keyDist= sequential	valueDist= sequential
+kAcc=0.300000	vAcc=0.284470	kAccPerRound=0.995833	kPeak=   710	range=  1000	keys=  2000	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.300000	vAcc=0.309045	kAccPerRound=0.918333	kPeak=   198	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=   constant
+kAcc=0.350000	vAcc=0.362411	kAccPerRound=0.981667	kPeak=   150	range=   150	keys=   150	keyDist= sequential	valueDist=    uniform
+kAcc=0.350000	vAcc=0.392471	kAccPerRound=0.998333	kPeak=   150	range=   150	keys=   150	keyDist= sequential	valueDist= sequential
+kAcc=0.350000	vAcc=0.423958	kAccPerRound=0.909167	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist=   constant
+kAcc=0.350000	vAcc=0.224952	kAccPerRound=1.000000	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist= sequential
+kAcc=0.350000	vAcc=0.424503	kAccPerRound=0.992500	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist=    zipfian
+kAcc=0.350000	vAcc=0.740806	kAccPerRound=1.000000	kPeak=    98	range=   201	keys=   100	keyDist= sequential	valueDist= sequential
+kAcc=0.350000	vAcc=0.347349	kAccPerRound=0.700833	kPeak=   378	range=   400	keys=   400	keyDist=    uniform	valueDist=   constant
+kAcc=0.350000	vAcc=0.138924	kAccPerRound=0.997500	kPeak=   400	range=   400	keys=   400	keyDist= sequential	valueDist= sequential
+kAcc=0.350000	vAcc=0.272458	kAccPerRound=0.880833	kPeak=   376	range=   400	keys=   800	keyDist=    uniform	valueDist=   constant
+kAcc=0.350000	vAcc=0.398123	kAccPerRound=0.995000	kPeak=   375	range=   400	keys=   800	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.350000	vAcc=0.198091	kAccPerRound=0.985833	kPeak=   379	range=   400	keys=   800	keyDist= sequential	valueDist=    uniform
+kAcc=0.350000	vAcc=0.358844	kAccPerRound=0.995833	kPeak=   692	range=  1000	keys=   500	keyDist=    uniform	valueDist=    uniform
+kAcc=0.350000	vAcc=0.342274	kAccPerRound=0.996667	kPeak=   734	range=  1000	keys=   500	keyDist=    uniform	valueDist= sequential
+kAcc=0.350000	vAcc=0.424866	kAccPerRound=0.987500	kPeak=   721	range=  1000	keys=   500	keyDist= sequential	valueDist=    hotspot
+kAcc=0.350000	vAcc=0.252189	kAccPerRound=0.860833	kPeak=   705	range=  1000	keys=  1000	keyDist=    uniform	valueDist=   constant
+kAcc=0.400000	vAcc=0.482726	kAccPerRound=0.998333	kPeak=   150	range=   150	keys=   300	keyDist=    uniform	valueDist= sequential
+kAcc=0.400000	vAcc=0.313703	kAccPerRound=0.979167	kPeak=   200	range=   200	keys=   200	keyDist= sequential	valueDist=    uniform
+kAcc=0.400000	vAcc=0.524691	kAccPerRound=0.875000	kPeak=   201	range=   201	keys=   100	keyDist=    uniform	valueDist=   constant
+kAcc=0.400000	vAcc=0.496364	kAccPerRound=0.986667	kPeak=   201	range=   201	keys=   100	keyDist= sequential	valueDist=    uniform
+kAcc=0.400000	vAcc=0.440476	kAccPerRound=0.819167	kPeak=   201	range=   201	keys=   201	keyDist=    uniform	valueDist=   constant
+kAcc=0.400000	vAcc=0.451801	kAccPerRound=0.993333	kPeak=   200	range=   201	keys=   402	keyDist= sequential	valueDist=    zipfian
+kAcc=0.400000	vAcc=0.381381	kAccPerRound=0.624167	kPeak=   384	range=   400	keys=   200	keyDist=    uniform	valueDist=   constant
+kAcc=0.400000	vAcc=0.458815	kAccPerRound=0.989167	kPeak=   384	range=   400	keys=   200	keyDist=    uniform	valueDist=    uniform
+kAcc=0.400000	vAcc=0.394421	kAccPerRound=0.995833	kPeak=   378	range=   400	keys=   400	keyDist=    uniform	valueDist= sequential
+kAcc=0.400000	vAcc=0.411343	kAccPerRound=0.991667	kPeak=   383	range=   400	keys=   400	keyDist= sequential	valueDist=    zipfian
+kAcc=0.400000	vAcc=0.464154	kAccPerRound=0.986667	kPeak=   717	range=  1000	keys=   500	keyDist= sequential	valueDist=    zipfian
+kAcc=0.400000	vAcc=0.341014	kAccPerRound=0.993333	kPeak=   703	range=  1000	keys=  1000	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.450000	vAcc=0.705110	kAccPerRound=1.000000	kPeak=   150	range=   150	keys=    75	keyDist= sequential	valueDist= sequential
+kAcc=0.450000	vAcc=0.620823	kAccPerRound=0.997500	kPeak=   200	range=   200	keys=   100	keyDist=    uniform	valueDist= sequential
+kAcc=0.450000	vAcc=0.508811	kAccPerRound=0.988333	kPeak=   200	range=   200	keys=   100	keyDist= sequential	valueDist=    uniform
+kAcc=0.450000	vAcc=0.375000	kAccPerRound=0.765833	kPeak=   199	range=   200	keys=   400	keyDist=    uniform	valueDist=   constant
+kAcc=0.450000	vAcc=0.351862	kAccPerRound=0.995833	kPeak=   377	range=   400	keys=   400	keyDist=    uniform	valueDist=    uniform
+kAcc=0.450000	vAcc=0.417598	kAccPerRound=0.990000	kPeak=   381	range=   400	keys=   400	keyDist= sequential	valueDist=    hotspot
+kAcc=0.450000	vAcc=0.305878	kAccPerRound=0.998333	kPeak=   386	range=   400	keys=   800	keyDist=    uniform	valueDist=    uniform
+kAcc=0.450000	vAcc=0.640625	kAccPerRound=0.990000	kPeak=   696	range=  1000	keys=   100	keyDist=    uniform	valueDist=    uniform
+kAcc=0.450000	vAcc=0.553746	kAccPerRound=0.675000	kPeak=   319	range=  1000	keys=   100	keyDist=    hotspot	valueDist=   constant
+kAcc=0.450000	vAcc=0.630454	kAccPerRound=0.986667	kPeak=   347	range=  1000	keys=   100	keyDist=    hotspot	valueDist=    uniform
+kAcc=0.450000	vAcc=0.788050	kAccPerRound=0.990000	kPeak=   724	range=  1000	keys=   100	keyDist= sequential	valueDist=    uniform
+kAcc=0.450000	vAcc=0.403029	kAccPerRound=0.995833	kPeak=   205	range=  1000	keys=   500	keyDist=    hotspot	valueDist= sequential
+kAcc=0.450000	vAcc=0.314607	kAccPerRound=0.895833	kPeak=   199	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=   constant
+kAcc=0.450000	vAcc=0.435476	kAccPerRound=0.997500	kPeak=   209	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    zipfian
+kAcc=0.450000	vAcc=0.305118	kAccPerRound=1.000000	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    uniform
+kAcc=0.500000	vAcc=0.492380	kAccPerRound=0.991667	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist=    uniform
+kAcc=0.500000	vAcc=0.420071	kAccPerRound=0.990000	kPeak=   200	range=   200	keys=   400	keyDist= sequential	valueDist=    hotspot
+kAcc=0.500000	vAcc=0.256709	kAccPerRound=0.993333	kPeak=   200	range=   201	keys=   402	keyDist= sequential	valueDist=    uniform
+kAcc=0.500000	vAcc=0.447513	kAccPerRound=0.994167	kPeak=   380	range=   400	keys=   200	keyDist=    uniform	valueDist= sequential
+kAcc=0.500000	vAcc=0.359320	kAccPerRound=0.804167	kPeak=   200	range=  1000	keys=   500	keyDist=    hotspot	valueDist=   constant
+kAcc=0.500000	vAcc=0.290257	kAccPerRound=1.000000	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist= sequential
+kAcc=0.550000	vAcc=0.406721	kAccPerRound=0.999167	kPeak=   200	range=   200	keys=   400	keyDist=    uniform	valueDist=    uniform
+kAcc=0.550000	vAcc=0.490221	kAccPerRound=0.993333	kPeak=   200	range=   201	keys=   201	keyDist=    uniform	valueDist= sequential
+kAcc=0.550000	vAcc=0.499500	kAccPerRound=0.993333	kPeak=   200	range=   201	keys=   402	keyDist=    uniform	valueDist=    hotspot
+kAcc=0.550000	vAcc=0.292335	kAccPerRound=0.982500	kPeak=   384	range=   400	keys=   800	keyDist= sequential	valueDist=    hotspot
+kAcc=0.550000	vAcc=0.492614	kAccPerRound=0.991667	kPeak=   241	range=  1000	keys=   500	keyDist=    hotspot	valueDist=    hotspot
+kAcc=0.550000	vAcc=0.411975	kAccPerRound=0.997500	kPeak=   207	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    hotspot
+kAcc=0.550000	vAcc=0.333285	kAccPerRound=0.998333	kPeak=   199	range=  1000	keys=  1000	keyDist=    hotspot	valueDist= sequential
+kAcc=0.550000	vAcc=0.341376	kAccPerRound=0.999167	kPeak=   199	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    hotspot
+kAcc=0.600000	vAcc=0.313598	kAccPerRound=0.997500	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist=    uniform
+kAcc=0.600000	vAcc=0.435381	kAccPerRound=0.813333	kPeak=   200	range=   200	keys=   200	keyDist=    uniform	valueDist=   constant
+kAcc=0.600000	vAcc=0.390047	kAccPerRound=0.996667	kPeak=   199	range=   200	keys=   400	keyDist=    uniform	valueDist= sequential
+kAcc=0.600000	vAcc=0.354415	kAccPerRound=0.807500	kPeak=   201	range=   201	keys=   402	keyDist=    uniform	valueDist=   constant
+kAcc=0.600000	vAcc=0.393915	kAccPerRound=0.999167	kPeak=   201	range=   201	keys=   402	keyDist=    uniform	valueDist= sequential
+kAcc=0.600000	vAcc=0.388851	kAccPerRound=0.995833	kPeak=   384	range=   400	keys=   800	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.600000	vAcc=0.467948	kAccPerRound=0.999167	kPeak=    80	range=   400	keys=   800	keyDist=    hotspot	valueDist=    uniform
+kAcc=0.600000	vAcc=0.333069	kAccPerRound=0.999167	kPeak=   199	range=  1000	keys=  1000	keyDist=    hotspot	valueDist=    uniform
+kAcc=0.650000	vAcc=0.473419	kAccPerRound=0.991667	kPeak=   150	range=   150	keys=   300	keyDist= sequential	valueDist=    hotspot
+kAcc=0.650000	vAcc=0.417376	kAccPerRound=0.995000	kPeak=   201	range=   201	keys=   402	keyDist= sequential	valueDist=    hotspot
+kAcc=0.650000	vAcc=0.370632	kAccPerRound=0.997500	kPeak=   202	range=  1000	keys=   500	keyDist=    hotspot	valueDist=    uniform
+kAcc=0.650000	vAcc=0.350358	kAccPerRound=0.997500	kPeak=   200	range=  1000	keys=  2000	keyDist=    hotspot	valueDist=    zipfian
+kAcc=0.700000	vAcc=0.483025	kAccPerRound=0.998333	kPeak=   199	range=   200	keys=   200	keyDist=    uniform	valueDist= sequential
+kAcc=0.700000	vAcc=0.489459	kAccPerRound=0.993333	kPeak=   201	range=   201	keys=   402	keyDist=    uniform	valueDist=    zipfian
+kAcc=0.700000	vAcc=0.493834	kAccPerRound=0.897500	kPeak=    80	range=   400	keys=   400	keyDist=    hotspot	valueDist=   constant
+kAcc=0.700000	vAcc=0.480718	kAccPerRound=1.000000	kPeak=    80	range=   400	keys=   800	keyDist=    hotspot	valueDist= sequential
+kAcc=0.800000	vAcc=0.447046	kAccPerRound=0.921667	kPeak=    80	range=   400	keys=   800	keyDist=    hotspot	valueDist=   constant
 
 =================================
 Store v3(top200):
-Avg key efficiency: 0.961979, Avg value efficiency: 0.976873, Avg peak keys: 297.760417, Max peak keys: 1000
+Avg key accuracy: 0.962604, Avg value accuracy: 0.978869, Avg key accuracy per round: 0.979290, Avg peak keys: 297.868750, Max peak keys: 1000
 Bad cases:
-kEff=0.000000	vEff=0.000000	kPeak=  1000	range=  1000	keys=  2000	keyDist= sequential	valueDist= sequential
-kEff=0.200000	vEff=0.000000	kPeak=   400	range=   400	keys=   400	keyDist=    hotspot	valueDist=   constant
-kEff=0.200000	vEff=0.550576	kPeak=  1000	range=  1000	keys=  1000	keyDist= sequential	valueDist=    uniform
-kEff=0.300000	vEff=0.641137	kPeak=  1000	range=  1000	keys=   500	keyDist= sequential	valueDist= sequential
-kEff=0.300000	vEff=0.377778	kPeak=  1000	range=  1000	keys=  1000	keyDist= sequential	valueDist= sequential
-kEff=0.350000	vEff=0.750716	kPeak=   400	range=   400	keys=   800	keyDist= sequential	valueDist= sequential
-kEff=0.350000	vEff=0.570600	kPeak=  1000	range=  1000	keys=  2000	keyDist=    uniform	valueDist=   constant
-kEff=0.450000	vEff=0.467265	kPeak=  1000	range=  1000	keys=  2000	keyDist= sequential	valueDist=    uniform
+kAcc=0.000000	vAcc=0.000000	kAccPerRound=0.987500	kPeak=  1000	range=  1000	keys=  2000	keyDist= sequential	valueDist= sequential
+kAcc=0.300000	vAcc=0.641137	kAccPerRound=0.995000	kPeak=  1000	range=  1000	keys=   500	keyDist= sequential	valueDist= sequential
+kAcc=0.300000	vAcc=0.377778	kAccPerRound=0.991667	kPeak=  1000	range=  1000	keys=  1000	keyDist= sequential	valueDist= sequential
+kAcc=0.300000	vAcc=0.461672	kAccPerRound=0.980000	kPeak=  1000	range=  1000	keys=  2000	keyDist= sequential	valueDist=    uniform
+kAcc=0.350000	vAcc=0.680272	kAccPerRound=0.866667	kPeak=  1000	range=  1000	keys=  1000	keyDist=    uniform	valueDist=   constant
+kAcc=0.350000	vAcc=0.547218	kAccPerRound=0.894167	kPeak=  1000	range=  1000	keys=  1000	keyDist= sequential	valueDist=    uniform
+kAcc=0.350000	vAcc=0.579251	kAccPerRound=0.822500	kPeak=  1000	range=  1000	keys=  2000	keyDist=    uniform	valueDist=   constant
+kAcc=0.400000	vAcc=0.750371	kAccPerRound=0.998333	kPeak=   400	range=   400	keys=   800	keyDist= sequential	valueDist= sequential
+kAcc=0.850000	vAcc=1.000000	kAccPerRound=0.351667	kPeak=   997	range=  1000	keys=   100	keyDist=    uniform	valueDist=   constant
 ```
